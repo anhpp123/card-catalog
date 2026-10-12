@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "currencies": [
     {
       "id": "cash",
@@ -40,17 +40,17 @@
     {
       "id": "hilton",
       "label": "Hilton Honors points",
-      "default_cpp": 0.5
+      "default_cpp": 0.4
     },
     {
       "id": "marriott",
       "label": "Marriott Bonvoy points",
-      "default_cpp": 0.8
+      "default_cpp": 0.7
     },
     {
       "id": "hyatt",
       "label": "World of Hyatt points",
-      "default_cpp": 1.7
+      "default_cpp": 1.5
     },
     {
       "id": "united",
@@ -77,119 +77,298 @@
     {
       "id": "travel_general",
       "label_zh": "旅行",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "travel",
+        "trip",
+        "旅游",
+        "出行"
+      ]
     },
     {
       "id": "airfare",
       "label_zh": "机票",
-      "parent": "travel_general"
+      "parent": "travel_general",
+      "aliases": [
+        "airfare",
+        "flight",
+        "airline",
+        "plane ticket",
+        "航班",
+        "飞机",
+        "航空"
+      ]
     },
     {
       "id": "hotels",
       "label_zh": "酒店",
-      "parent": "travel_general"
+      "parent": "travel_general",
+      "aliases": [
+        "hotel",
+        "lodging",
+        "住宿",
+        "宾馆",
+        "旅馆"
+      ]
     },
     {
       "id": "car_rental",
       "label_zh": "租车",
-      "parent": "travel_general"
+      "parent": "travel_general",
+      "aliases": [
+        "car rental",
+        "rental car",
+        "car hire"
+      ]
     },
     {
       "id": "vacation_rentals",
       "label_zh": "度假租屋",
-      "parent": "travel_general"
+      "parent": "travel_general",
+      "aliases": [
+        "vacation rental",
+        "airbnb",
+        "vrbo",
+        "民宿"
+      ]
     },
     {
       "id": "transit",
       "label_zh": "公共交通与通勤",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "transit",
+        "public transit",
+        "commute",
+        "subway",
+        "metro",
+        "bus",
+        "train",
+        "地铁",
+        "公交",
+        "火车"
+      ]
     },
     {
       "id": "rideshare",
       "label_zh": "网约车",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "rideshare",
+        "ride share",
+        "uber",
+        "taxi",
+        "打车",
+        "叫车",
+        "出租车"
+      ]
     },
     {
       "id": "dining",
       "label_zh": "餐饮",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "dining",
+        "restaurant",
+        "food",
+        "takeout",
+        "cafe",
+        "coffee",
+        "餐厅",
+        "饭店",
+        "吃饭",
+        "外卖",
+        "咖啡"
+      ]
     },
     {
       "id": "groceries",
       "label_zh": "超市买菜",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "grocery",
+        "groceries",
+        "supermarket",
+        "超市",
+        "买菜",
+        "杂货"
+      ]
     },
     {
       "id": "online_groceries",
       "label_zh": "网上买菜",
-      "parent": "groceries"
+      "parent": "groceries",
+      "aliases": [
+        "online grocery",
+        "grocery delivery",
+        "instacart"
+      ]
     },
     {
       "id": "gas",
       "label_zh": "加油",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "gas",
+        "gas station",
+        "fuel",
+        "petrol",
+        "gasoline",
+        "加油站",
+        "汽油"
+      ]
     },
     {
       "id": "ev_charging",
       "label_zh": "电动车充电",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "ev charging",
+        "electric vehicle",
+        "charging",
+        "supercharger",
+        "充电",
+        "充电桩"
+      ]
     },
     {
       "id": "streaming",
       "label_zh": "流媒体订阅",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "streaming",
+        "netflix",
+        "spotify",
+        "hulu",
+        "disney+",
+        "youtube",
+        "视频会员",
+        "音乐会员"
+      ]
     },
     {
       "id": "entertainment",
       "label_zh": "娱乐",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "entertainment",
+        "movie",
+        "cinema",
+        "concert",
+        "tickets",
+        "电影",
+        "演唱会",
+        "门票"
+      ]
     },
     {
       "id": "fitness",
       "label_zh": "健身",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "fitness",
+        "gym",
+        "workout",
+        "健身房"
+      ]
     },
     {
       "id": "phone_plans",
       "label_zh": "手机套餐",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "phone",
+        "cell phone",
+        "wireless",
+        "mobile plan",
+        "话费",
+        "电话费"
+      ]
     },
     {
       "id": "utilities",
       "label_zh": "水电网络",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "utilities",
+        "utility",
+        "electricity",
+        "water bill",
+        "internet",
+        "cable",
+        "电费",
+        "水费",
+        "网费",
+        "燃气"
+      ]
     },
     {
       "id": "rent",
       "label_zh": "房租与房贷",
       "parent": null,
-      "no_base_fallback": true
+      "no_base_fallback": true,
+      "aliases": [
+        "rent",
+        "mortgage",
+        "房租",
+        "房贷",
+        "租金"
+      ]
     },
     {
       "id": "foreign_transactions",
       "label_zh": "外币交易",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "foreign transaction",
+        "international",
+        "overseas",
+        "abroad",
+        "海外",
+        "境外",
+        "出国"
+      ]
     },
     {
       "id": "shopping",
       "label_zh": "购物",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "shopping",
+        "retail",
+        "商场",
+        "买东西"
+      ]
     },
     {
       "id": "online_shopping",
       "label_zh": "网购",
-      "parent": "shopping"
+      "parent": "shopping",
+      "aliases": [
+        "online shopping",
+        "online",
+        "e-commerce",
+        "电商",
+        "网上购物"
+      ]
     },
     {
       "id": "drugstores",
       "label_zh": "药店",
-      "parent": null
+      "parent": null,
+      "aliases": [
+        "drugstore",
+        "pharmacy",
+        "cvs",
+        "walgreens",
+        "药房"
+      ]
     },
     {
       "id": "everything_else",
       "label_zh": "其他消费",
       "parent": null,
-      "search_terms": [
+      "aliases": [
         "其他",
         "一般",
         "基础",
@@ -204,52 +383,87 @@
     {
       "id": "brand:alaska",
       "label_zh": "阿拉斯加航空",
-      "parent": "airfare"
+      "parent": "airfare",
+      "aliases": [
+        "alaska airlines"
+      ]
     },
     {
       "id": "brand:hawaiian",
       "label_zh": "夏威夷航空",
-      "parent": "airfare"
+      "parent": "airfare",
+      "aliases": [
+        "hawaiian airlines"
+      ]
     },
     {
       "id": "brand:united",
       "label_zh": "美联航",
-      "parent": "airfare"
+      "parent": "airfare",
+      "aliases": [
+        "united airlines",
+        "联合航空"
+      ]
     },
     {
       "id": "brand:american_airlines",
       "label_zh": "美国航空",
-      "parent": "airfare"
+      "parent": "airfare",
+      "aliases": [
+        "american airlines",
+        "美航"
+      ]
     },
     {
       "id": "brand:qatar",
       "label_zh": "卡塔尔航空",
-      "parent": "airfare"
+      "parent": "airfare",
+      "aliases": [
+        "qatar airways",
+        "卡航"
+      ]
     },
     {
       "id": "brand:marriott",
       "label_zh": "万豪",
-      "parent": "hotels"
+      "parent": "hotels",
+      "aliases": [
+        "marriott bonvoy",
+        "bonvoy"
+      ]
     },
     {
       "id": "brand:hilton",
       "label_zh": "希尔顿",
-      "parent": "hotels"
+      "parent": "hotels",
+      "aliases": [
+        "hilton honors"
+      ]
     },
     {
       "id": "brand:hyatt",
       "label_zh": "凯悦",
-      "parent": "hotels"
+      "parent": "hotels",
+      "aliases": [
+        "world of hyatt"
+      ]
     },
     {
       "id": "brand:amazon",
       "label_zh": "亚马逊",
-      "parent": "online_shopping"
+      "parent": "online_shopping",
+      "aliases": [
+        "amazon.com"
+      ]
     },
     {
       "id": "brand:whole_foods",
       "label_zh": "全食超市",
-      "parent": "groceries"
+      "parent": "groceries",
+      "aliases": [
+        "whole foods",
+        "全食"
+      ]
     },
     {
       "id": "brand:costco",
@@ -257,6 +471,11 @@
       "parent": "shopping",
       "accepted_networks": [
         "visa"
+      ],
+      "aliases": [
+        "costco warehouse",
+        "开市客",
+        "好事多"
       ]
     },
     {
@@ -265,6 +484,11 @@
       "parent": "gas",
       "accepted_networks": [
         "visa"
+      ],
+      "aliases": [
+        "costco gas",
+        "costco gas station",
+        "开市客加油站"
       ]
     },
     {
@@ -280,22 +504,34 @@
     {
       "id": "brand:bilt_partner_dining",
       "label_zh": "Bilt 合作餐厅",
-      "parent": "dining"
+      "parent": "dining",
+      "aliases": [
+        "bilt dining"
+      ]
     },
     {
       "id": "brand:lululemon",
       "label_zh": "lululemon",
-      "parent": "shopping"
+      "parent": "shopping",
+      "aliases": [
+        "露露乐蒙"
+      ]
     },
     {
       "id": "brand:walmart",
       "label_zh": "沃尔玛",
-      "parent": "shopping"
+      "parent": "shopping",
+      "aliases": [
+        "walmart.com"
+      ]
     },
     {
       "id": "brand:oura",
       "label_zh": "Oura",
-      "parent": "shopping"
+      "parent": "shopping",
+      "aliases": [
+        "oura ring"
+      ]
     }
   ],
   "benefit_families": [

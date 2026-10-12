@@ -11,18 +11,23 @@
     // cpp = cents per point，用户可在设置里覆盖；cash 类 currency 的 default_cpp 为 1.0
   ],
   "categories": [
-    {"id": "hotels", "label_zh": "酒店", "parent": "travel_general"},  // parent 可为 null
+    {"id": "hotels", "label_zh": "酒店", "parent": "travel_general",  // parent 可为 null
+     "aliases": ["hotel", "lodging", "住宿"]},   // 可选（[]，categories 和 brands 都可写）：查卡搜索框的
+                                           // 同义词，中英文都行。搜索词不分大小写，是 label_zh、id、aliases
+                                           // 任一个的子串就算匹配；也匹配直接上级类别的 label_zh 和 aliases
+                                           // （「酒店」「hotel」都列出万豪）。旧名 search_terms（v1.0 目录的
+                                           // everything_else 上有）App 仍照 aliases 搜，新目录不再写
     {"id": "rent", "label_zh": "房租与房贷", "parent": null,
      "no_base_fallback": true},            // 可选（false）：这一类（及其子类、子品牌）不按 base_rate 算，
                                            // 没有专属行的卡不参与排序
     {"id": "everything_else", "label_zh": "其他消费", "parent": null,
-     "search_terms": ["其他", "一般", "other"]}   // 兜底类别：查它时每张卡按 base_rate 排序，另加显式的
+     "aliases": ["其他", "一般", "other"]}   // 兜底类别：查它时每张卡按 base_rate 排序，另加显式的
                                            // everything_else 行（目录里的这类行在转换时并进 base_rate，
-                                           // 用户的 custom_earn 可以挂在这里）。
-                                           // search_terms 可选（categories 和 brands 都可写）：查卡搜索框的别名
+                                           // 用户的 custom_earn 可以挂在这里）
   ],
   "brands": [
-    {"id": "brand:marriott", "label_zh": "万豪", "parent": "hotels"},   // parent 必须是 categories 里的 id
+    {"id": "brand:marriott", "label_zh": "万豪", "parent": "hotels",   // parent 必须是 categories 里的 id
+     "aliases": ["marriott bonvoy", "bonvoy"]},
     {"id": "brand:costco", "label_zh": "好市多", "parent": "shopping",
      "accepted_networks": ["visa"]}        // 可选（null = 都收）：商家收的卡组织，其余卡不参与排序
   ],
@@ -133,7 +138,7 @@
 - 同一张卡里 `cap.group` 相同的行，`cap.amount` 和 `cap.period` 必须相同；组只有一行时打 warning。
 - `credits[].windows` 每段有 `from`、`to`，按时间排序、不重叠，落在 `valid_from..valid_to` 内。
 - `credits[].month_amounts` 只能写在 `period` 为 `month`、没有 `windows` 的福利上；键是 `"1"`..`"12"`，值是正数。
-- `search_terms` 是非空字符串列表。
+- `aliases`（及旧名 `search_terms`）有值时是非空字符串组成的列表。
 - `benefit_types` id 唯一、有 `label_zh`、包含 `other`；每条 `credits[].benefit_type` 都必须是其中之一。
 - `benefit_families` id 唯一、有 `label_zh`、包含 `other`；每个 `benefit_types[].benefit_family` 都必须是其中之一。
 - 每条 `credits[].stack` 是 `per_card`、`once`、`unknown` 之一；同一 `benefit_type` 的福利 `stack` 必须相同（「我能用几份」按类型设）。
