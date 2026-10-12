@@ -1,0 +1,4168 @@
+{
+  "schema": 2,
+  "updated": "2026-10-11",
+  "currencies": [
+    {
+      "id": "cash",
+      "label": "Cash back",
+      "default_cpp": 1.0
+    },
+    {
+      "id": "wf_rewards",
+      "label": "Wells Fargo Rewards points",
+      "default_cpp": 1.0
+    },
+    {
+      "id": "bofa_points",
+      "label": "Bank of America Premium Rewards points",
+      "default_cpp": 1.0
+    },
+    {
+      "id": "chase_ur",
+      "label": "Chase Ultimate Rewards",
+      "default_cpp": 1.5
+    },
+    {
+      "id": "amex_mr",
+      "label": "Amex Membership Rewards",
+      "default_cpp": 1.5
+    },
+    {
+      "id": "c1_miles",
+      "label": "Capital One miles",
+      "default_cpp": 1.5
+    },
+    {
+      "id": "bilt",
+      "label": "Bilt Points",
+      "default_cpp": 1.5
+    },
+    {
+      "id": "hilton",
+      "label": "Hilton Honors points",
+      "default_cpp": 0.5
+    },
+    {
+      "id": "marriott",
+      "label": "Marriott Bonvoy points",
+      "default_cpp": 0.8
+    },
+    {
+      "id": "hyatt",
+      "label": "World of Hyatt points",
+      "default_cpp": 1.7
+    },
+    {
+      "id": "united",
+      "label": "United MileagePlus miles",
+      "default_cpp": 1.2
+    },
+    {
+      "id": "aadvantage",
+      "label": "American Airlines AAdvantage miles",
+      "default_cpp": 1.4
+    },
+    {
+      "id": "atmos",
+      "label": "Atmos Rewards points",
+      "default_cpp": 1.3
+    },
+    {
+      "id": "avios",
+      "label": "Avios",
+      "default_cpp": 1.3
+    }
+  ],
+  "categories": [
+    {
+      "id": "travel_general",
+      "label_zh": "旅行",
+      "parent": null
+    },
+    {
+      "id": "airfare",
+      "label_zh": "机票",
+      "parent": "travel_general"
+    },
+    {
+      "id": "hotels",
+      "label_zh": "酒店",
+      "parent": "travel_general"
+    },
+    {
+      "id": "car_rental",
+      "label_zh": "租车",
+      "parent": "travel_general"
+    },
+    {
+      "id": "vacation_rentals",
+      "label_zh": "度假租屋",
+      "parent": "travel_general"
+    },
+    {
+      "id": "transit",
+      "label_zh": "公共交通与通勤",
+      "parent": null
+    },
+    {
+      "id": "rideshare",
+      "label_zh": "网约车",
+      "parent": null
+    },
+    {
+      "id": "dining",
+      "label_zh": "餐饮",
+      "parent": null
+    },
+    {
+      "id": "groceries",
+      "label_zh": "超市买菜",
+      "parent": null
+    },
+    {
+      "id": "online_groceries",
+      "label_zh": "网上买菜",
+      "parent": "groceries"
+    },
+    {
+      "id": "gas",
+      "label_zh": "加油",
+      "parent": null
+    },
+    {
+      "id": "ev_charging",
+      "label_zh": "电动车充电",
+      "parent": null
+    },
+    {
+      "id": "streaming",
+      "label_zh": "流媒体订阅",
+      "parent": null
+    },
+    {
+      "id": "entertainment",
+      "label_zh": "娱乐",
+      "parent": null
+    },
+    {
+      "id": "fitness",
+      "label_zh": "健身",
+      "parent": null
+    },
+    {
+      "id": "phone_plans",
+      "label_zh": "手机套餐",
+      "parent": null
+    },
+    {
+      "id": "utilities",
+      "label_zh": "水电网络",
+      "parent": null
+    },
+    {
+      "id": "rent",
+      "label_zh": "房租与房贷",
+      "parent": null,
+      "no_base_fallback": true
+    },
+    {
+      "id": "foreign_transactions",
+      "label_zh": "外币交易",
+      "parent": null
+    },
+    {
+      "id": "shopping",
+      "label_zh": "购物",
+      "parent": null
+    },
+    {
+      "id": "online_shopping",
+      "label_zh": "网购",
+      "parent": "shopping"
+    },
+    {
+      "id": "drugstores",
+      "label_zh": "药店",
+      "parent": null
+    },
+    {
+      "id": "everything_else",
+      "label_zh": "其他消费",
+      "parent": null,
+      "search_terms": [
+        "其他",
+        "一般",
+        "基础",
+        "other",
+        "general",
+        "everything else",
+        "base"
+      ]
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand:alaska",
+      "label_zh": "阿拉斯加航空",
+      "parent": "airfare"
+    },
+    {
+      "id": "brand:hawaiian",
+      "label_zh": "夏威夷航空",
+      "parent": "airfare"
+    },
+    {
+      "id": "brand:united",
+      "label_zh": "美联航",
+      "parent": "airfare"
+    },
+    {
+      "id": "brand:american_airlines",
+      "label_zh": "美国航空",
+      "parent": "airfare"
+    },
+    {
+      "id": "brand:qatar",
+      "label_zh": "卡塔尔航空",
+      "parent": "airfare"
+    },
+    {
+      "id": "brand:marriott",
+      "label_zh": "万豪",
+      "parent": "hotels"
+    },
+    {
+      "id": "brand:hilton",
+      "label_zh": "希尔顿",
+      "parent": "hotels"
+    },
+    {
+      "id": "brand:hyatt",
+      "label_zh": "凯悦",
+      "parent": "hotels"
+    },
+    {
+      "id": "brand:amazon",
+      "label_zh": "亚马逊",
+      "parent": "online_shopping"
+    },
+    {
+      "id": "brand:whole_foods",
+      "label_zh": "全食超市",
+      "parent": "groceries"
+    },
+    {
+      "id": "brand:costco",
+      "label_zh": "好市多",
+      "parent": "shopping",
+      "accepted_networks": [
+        "visa"
+      ]
+    },
+    {
+      "id": "brand:costco_gas",
+      "label_zh": "好市多加油站",
+      "parent": "gas",
+      "accepted_networks": [
+        "visa"
+      ]
+    },
+    {
+      "id": "brand:lyft",
+      "label_zh": "Lyft",
+      "parent": "rideshare"
+    },
+    {
+      "id": "brand:peloton",
+      "label_zh": "Peloton",
+      "parent": "fitness"
+    },
+    {
+      "id": "brand:bilt_partner_dining",
+      "label_zh": "Bilt 合作餐厅",
+      "parent": "dining"
+    },
+    {
+      "id": "brand:lululemon",
+      "label_zh": "lululemon",
+      "parent": "shopping"
+    },
+    {
+      "id": "brand:walmart",
+      "label_zh": "沃尔玛",
+      "parent": "shopping"
+    },
+    {
+      "id": "brand:oura",
+      "label_zh": "Oura",
+      "parent": "shopping"
+    }
+  ],
+  "benefit_families": [
+    {
+      "id": "rides_delivery",
+      "label_zh": "叫车外卖"
+    },
+    {
+      "id": "airline",
+      "label_zh": "航空"
+    },
+    {
+      "id": "hotel",
+      "label_zh": "酒店"
+    },
+    {
+      "id": "travel",
+      "label_zh": "旅行"
+    },
+    {
+      "id": "dining",
+      "label_zh": "餐厅"
+    },
+    {
+      "id": "subscriptions",
+      "label_zh": "订阅会员"
+    },
+    {
+      "id": "shopping",
+      "label_zh": "购物"
+    },
+    {
+      "id": "fitness",
+      "label_zh": "健身"
+    },
+    {
+      "id": "travel_id",
+      "label_zh": "出行证件"
+    },
+    {
+      "id": "other",
+      "label_zh": "其他"
+    }
+  ],
+  "benefit_types": [
+    {
+      "id": "uber_cash",
+      "label_zh": "Uber Cash",
+      "benefit_family": "rides_delivery"
+    },
+    {
+      "id": "uber_one",
+      "label_zh": "Uber One 会员",
+      "benefit_family": "rides_delivery",
+      "note_zh": "一个 Uber 账户只有一个会员"
+    },
+    {
+      "id": "lyft",
+      "label_zh": "Lyft",
+      "benefit_family": "rides_delivery"
+    },
+    {
+      "id": "doordash_restaurant",
+      "label_zh": "DoorDash 餐厅订单",
+      "benefit_family": "rides_delivery",
+      "note_zh": "一个 DoorDash 账户同时只挂一个 DashPass，只能用一张卡的优惠"
+    },
+    {
+      "id": "doordash_non_restaurant",
+      "label_zh": "DoorDash 非餐厅订单",
+      "benefit_family": "rides_delivery",
+      "note_zh": "一个 DoorDash 账户同时只挂一个 DashPass，只能用一张卡的优惠"
+    },
+    {
+      "id": "amex_airline_fee",
+      "label_zh": "Amex 航空杂费（选定航司）",
+      "benefit_family": "airline"
+    },
+    {
+      "id": "bofa_airline_incidentals",
+      "label_zh": "BofA 航空杂费",
+      "benefit_family": "airline"
+    },
+    {
+      "id": "aspire_flight",
+      "label_zh": "Aspire 机票抵扣",
+      "benefit_family": "airline"
+    },
+    {
+      "id": "boundless_airline_offer",
+      "label_zh": "Boundless 航空消费返 $50",
+      "benefit_family": "airline"
+    },
+    {
+      "id": "amex_fhr_thc",
+      "label_zh": "Amex FHR / THC 酒店",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "chase_travel_hotel",
+      "label_zh": "Chase Travel 酒店",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "chase_the_edit",
+      "label_zh": "The Edit 酒店",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "bilt_travel_hotel",
+      "label_zh": "Bilt Travel 酒店",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "hilton_resort",
+      "label_zh": "Hilton 度假村",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "hilton_waldorf_conrad",
+      "label_zh": "Waldorf / Conrad 每次入住",
+      "benefit_family": "hotel"
+    },
+    {
+      "id": "csr_travel",
+      "label_zh": "CSR 旅行抵扣",
+      "benefit_family": "travel"
+    },
+    {
+      "id": "capital_one_travel",
+      "label_zh": "Capital One Travel 抵扣",
+      "benefit_family": "travel"
+    },
+    {
+      "id": "turo",
+      "label_zh": "Turo",
+      "benefit_family": "travel"
+    },
+    {
+      "id": "resy",
+      "label_zh": "Resy 餐厅",
+      "benefit_family": "dining"
+    },
+    {
+      "id": "chase_exclusive_tables",
+      "label_zh": "Exclusive Tables 餐厅",
+      "benefit_family": "dining"
+    },
+    {
+      "id": "amex_digital_entertainment",
+      "label_zh": "Amex 数字娱乐",
+      "benefit_family": "subscriptions"
+    },
+    {
+      "id": "bofa_lifestyle",
+      "label_zh": "BofA 生活便利",
+      "benefit_family": "subscriptions"
+    },
+    {
+      "id": "walmart_plus",
+      "label_zh": "Walmart+ 会员",
+      "benefit_family": "subscriptions",
+      "note_zh": "一个 Walmart 账户只有一个会员"
+    },
+    {
+      "id": "lululemon",
+      "label_zh": "lululemon",
+      "benefit_family": "shopping"
+    },
+    {
+      "id": "oura",
+      "label_zh": "Oura",
+      "benefit_family": "shopping"
+    },
+    {
+      "id": "stubhub",
+      "label_zh": "StubHub / viagogo",
+      "benefit_family": "shopping"
+    },
+    {
+      "id": "equinox",
+      "label_zh": "Equinox",
+      "benefit_family": "fitness"
+    },
+    {
+      "id": "peloton",
+      "label_zh": "Peloton 会员",
+      "benefit_family": "fitness"
+    },
+    {
+      "id": "trusted_traveler",
+      "label_zh": "Global Entry / TSA PreCheck",
+      "benefit_family": "travel_id",
+      "note_zh": "一次申请管 4–5 年，每人只需要一张卡报销"
+    },
+    {
+      "id": "clear",
+      "label_zh": "CLEAR+",
+      "benefit_family": "travel_id",
+      "note_zh": "一人只需要一个会员；家人各自开会员时才多用几份"
+    },
+    {
+      "id": "bilt_cash",
+      "label_zh": "Bilt Cash",
+      "benefit_family": "other"
+    },
+    {
+      "id": "other",
+      "label_zh": "其他",
+      "benefit_family": "other"
+    }
+  ],
+  "cards": [
+    {
+      "id": "amex-everyday",
+      "name": "Amex EveryDay Credit Card",
+      "issuer": "American Express",
+      "network": "amex",
+      "annual_fee": 0,
+      "currency": "amex_mr",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x",
+        "notes": "Issuer: use the Card 20 or more times on purchases in a billing period and earn 20% extra points on those purchases (less returns and credits). That makes 1.2X on other purchases and 2.4X on supermarkets within the cap, only in billing periods with 20+ purchases. Not applied to the rate fields."
+      },
+      "earn": [
+        {
+          "key": "groceries",
+          "category": "groceries",
+          "label": "2X at U.S. supermarkets",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": {
+            "amount": 6000,
+            "period": "year",
+            "after_cap_rate": 1
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Issuer: 2X on up to $6,000 per year in purchases (12K points), then 1X. Whether 'year' is calendar year is not stated. Third-party snippet says superstores and warehouse clubs are excluded (not confirmed on issuer page).",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Earn lines read from embedded page data (card comparison block and hero banner: 'Earn 2X Membership Rewards Points at supermarkets, up to 12K points')."
+        },
+        {
+          "url": "https://onemileatatime.com/amex-everyday-credit-card-review/",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Confirms $0 fee, 2X on first $6,000/yr, 20% bonus at 20+ purchases per billing cycle; page dateModified 2026-07-11."
+        }
+      ],
+      "open_questions": [
+        "Third-party snippets (not fetched) say the 2X supermarket rate excludes superstores and warehouse clubs; the issuer text I could read does not repeat the exclusion.",
+        "One snippet mentions 2X at AmexTravel.com; the issuer page lists only supermarkets, other purchases and the 20-purchase bonus. Not included.",
+        "The Amex page is a catalog-style page; the EveryDay block is small. A May 2025 reader comment on OMAAT asked whether the card still earns Membership Rewards; the issuer hero text still says Membership Rewards.",
+        "Cap period (calendar year vs card year) is stated only as 'per year'."
+      ],
+      "watch": {
+        "url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+        "phrase": "on up to $6,000 per year in purchases",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain urllib GET works (no bot block) and returns the full server-rendered page with card data embedded in the HTML. Amex returns HTTP 200 with a 'Page Not Found' body for wrong card slugs (soft 404), so test the phrase, not the status. Page is multi-MB and includes catalog data for other cards, so hash only text near the phrase."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/amex-everyday/",
+        "phrase": "AmEx EveryDay"
+      }
+    },
+    {
+      "id": "amex-platinum",
+      "name": "The Platinum Card from American Express",
+      "issuer": "American Express",
+      "network": "amex",
+      "annual_fee": 895,
+      "currency": "amex_mr",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "airfare@direct",
+          "category": "airfare",
+          "label": "5X on flights booked directly with airlines or through Amex Travel",
+          "rate": 5,
+          "unit": "x",
+          "channel": "direct",
+          "cap": {
+            "amount": 500000,
+            "period": "year",
+            "after_cap_rate": 1,
+            "group": "flights"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Cap is $500,000 of these purchases per calendar year. After-cap rate of 1X is assumed (issuer says 1X on all other purchases and 'terms and limitations apply').",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the airline or Amex Travel"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "5X on flights booked directly with airlines or through Amex Travel",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": {
+            "amount": 500000,
+            "period": "year",
+            "after_cap_rate": 1,
+            "group": "flights"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Cap is $500,000 of these purchases per calendar year. After-cap rate of 1X is assumed (issuer says 1X on all other purchases and 'terms and limitations apply').",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the airline or Amex Travel"
+        },
+        {
+          "key": "hotels@issuer_portal",
+          "category": "hotels",
+          "label": "5X on prepaid hotels booked on AmexTravel.com",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "No cap stated on the issuer page.",
+          "confidence": "issuer_verified",
+          "via": "Amex Travel (prepaid hotels)"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "hotel-credit-fine-hotels-resorts-the-hotel-collection",
+          "name": "Hotel Credit (Fine Hotels + Resorts / The Hotel Collection)",
+          "benefit_type": "amex_fhr_thc",
+          "stack": "per_card",
+          "amount": 300,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $600/yr as $300 semi-annually. Prepaid bookings through Amex Travel only. The Hotel Collection requires a 2-night minimum. Issuer page does not state the half-year boundaries; Upgraded Points says Jan-Jun and Jul-Dec. Enrollment not mentioned on issuer page.",
+          "category_hint": "hotels"
+        },
+        {
+          "key": "uber-cash",
+          "name": "Uber Cash",
+          "benefit_type": "uber_cash",
+          "stack": "per_card",
+          "amount": 15,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "month_amounts": {
+            "12": 35
+          },
+          "notes": "$15 each month plus a $20 bonus in December ($35 in December, $200/yr). Basic Card Member only. Add the Platinum Card to the Uber account; an Amex Card must be selected as the payment method; US rides and Uber Eats. Does not roll over (Upgraded Points). 'Enrollment' here is linking the card in the Uber app, not Amex enrollment.",
+          "category_hint": "rideshare"
+        },
+        {
+          "key": "uber-one-credit",
+          "name": "Uber One Credit",
+          "benefit_type": "uber_one",
+          "stack": "once",
+          "amount": 120,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $120 per calendar year after paying for an auto-renewing Uber One membership with the Card. Enrollment not stated on issuer page.",
+          "category_hint": "rideshare"
+        },
+        {
+          "key": "airline-fee-credit",
+          "name": "Airline Fee Credit",
+          "benefit_type": "amex_airline_fee",
+          "stack": "per_card",
+          "amount": 200,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $200 per calendar year for incidental fees (bags, in-flight refreshments, change fees, lounge day passes, etc.) charged by ONE selected qualifying airline; the airline must be selected in the Amex account. Not airfare.",
+          "category_hint": "airfare"
+        },
+        {
+          "key": "clear-credit",
+          "name": "CLEAR+ Credit",
+          "benefit_type": "clear",
+          "stack": "once",
+          "amount": 219,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $219 per calendar year for an auto-renewing CLEAR+ membership, excluding taxes and fees. Enrollment not stated on issuer page.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "resy-credit",
+          "name": "Resy Credit",
+          "benefit_type": "resy",
+          "stack": "per_card",
+          "amount": 100,
+          "period": "quarter",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $100 each quarter ($400/yr) at qualifying US Resy restaurants. Issuer page does not define quarter boundaries (calendar quarters assumed).",
+          "category_hint": "dining"
+        },
+        {
+          "key": "digital-entertainment-credit",
+          "name": "Digital Entertainment Credit",
+          "benefit_type": "amex_digital_entertainment",
+          "stack": "per_card",
+          "amount": 25,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $25 each month ($300/yr) at participating partners: Disney+ (and bundles), ESPN streaming, Hulu, The New York Times, Paramount+, Peacock, The Wall Street Journal, YouTube Premium, YouTube TV.",
+          "category_hint": "streaming"
+        },
+        {
+          "key": "lululemon-credit",
+          "name": "lululemon Credit",
+          "benefit_type": "lululemon",
+          "stack": "per_card",
+          "amount": 75,
+          "period": "quarter",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $75 each quarter ($300/yr) at US lululemon retail stores (excluding outlets) and lululemon.com. Calendar quarters assumed.",
+          "category_hint": "brand:lululemon"
+        },
+        {
+          "key": "walmart-credit",
+          "name": "Walmart+ Credit",
+          "benefit_type": "walmart_plus",
+          "stack": "once",
+          "amount": 12.95,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $12.95 per month plus applicable taxes ($155/yr) for ONE auto-renewing monthly Walmart+ membership paid with the Card. Issuer page does not mention enrollment.",
+          "category_hint": "brand:walmart"
+        },
+        {
+          "key": "oura-ring-credit",
+          "name": "Oura Ring Credit",
+          "benefit_type": "oura",
+          "stack": "per_card",
+          "amount": 200,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $200 per calendar year, only for purchasing an Oura Ring at ouraring.com.",
+          "category_hint": "brand:oura"
+        },
+        {
+          "key": "equinox-credit",
+          "name": "Equinox Credit",
+          "benefit_type": "equinox",
+          "stack": "unknown",
+          "amount": 300,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "Up to $300 per calendar year for an Equinox club membership or Equinox+ digital subscription (auto-renewal).",
+          "category_hint": "fitness"
+        },
+        {
+          "key": "fee-credit-for-global-entry-or-tsa-precheck",
+          "name": "Fee Credit for Global Entry or TSA PreCheck",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Statement credit every 4 years after applying for Global Entry ($120), OR after applying for a 5-year TSA PreCheck membership (up to $85 through an official enrollment provider). Charge the fee to the Card.",
+          "category_hint": "travel_general"
+        }
+      ],
+      "certificates": [],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Read from raw HTML via local GET (benefit list, footnotes, FAQ) and via WebFetch."
+        },
+        {
+          "url": "https://upgradedpoints.com/credit-cards/reviews/american-express-platinum-card/benefits/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Used only for half-year boundaries and the Saks/SoulCycle status; page dated Sept 17, 2026."
+        }
+      ],
+      "open_questions": [
+        "Reset boundaries for semi-annual, quarterly and monthly credits are not stated on the issuer page; calendar halves/quarters/months assumed (Upgraded Points lists Jan-Jun and Jul-Dec for the hotel credit).",
+        "Enrollment is not mentioned on the issuer page for the hotel, Uber One, CLEAR+, Walmart+ and Global Entry credits (recorded as null, not false).",
+        "Saks Fifth Avenue credit ($100/yr) is no longer in the issuer's visible benefit list, but stale Saks text remains in the page's embedded data; Upgraded Points says it ended July 1, 2026. Excluded.",
+        "Upgraded Points mentions a SoulCycle bike credit ($300/yr); it is not on the issuer page. Excluded.",
+        "Additional-card annual fee is $195; Uber Cash is Basic Card Member only. Companion cards have no fee."
+      ],
+      "watch": {
+        "url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+        "phrase": "$895",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain urllib GET works (no bot block) and returns the full server-rendered page with card data embedded in the HTML. Amex returns HTTP 200 with a 'Page Not Found' body for wrong card slugs (soft 404), so test the phrase, not the status. Page is multi-MB and includes catalog data for other cards, so hash only text near the phrase."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/amex-platinum/",
+        "phrase": "AmEx Platinum"
+      }
+    },
+    {
+      "id": "atmos-ascent-visa",
+      "name": "Atmos Rewards Ascent Visa Signature (formerly Alaska Airlines Visa Signature)",
+      "issuer": "Bank of America",
+      "network": "visa",
+      "annual_fee": 95,
+      "currency": "atmos",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x",
+        "notes": "No caps. Customers with an eligible Bank of America account also get a 10% rewards bonus on all points earned from card purchases (3.3 / 2.2 / 1.1 effective); not applied to the rate fields."
+      },
+      "earn": [
+        {
+          "key": "brand:alaska",
+          "category": "brand:alaska",
+          "label": "3 points per $1 on eligible Alaska Airlines purchases",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "brand:hawaiian",
+          "category": "brand:hawaiian",
+          "label": "3 points per $1 on eligible Hawaiian Airlines purchases",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "2 points per $1 on gas",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "ev_charging",
+          "category": "ev_charging",
+          "label": "2 points per $1 on EV charging",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "streaming",
+          "category": "streaming",
+          "label": "2 points per $1 on cable and streaming services",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "transit",
+          "category": "transit",
+          "label": "2 points per $1 on local transit, including rideshare",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rideshare",
+          "category": "rideshare",
+          "label": "2 points per $1 on local transit, including rideshare",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Issuer wording is 'local transit (including ride share)'.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [
+        {
+          "key": "companion-fare-99-taxes-and-fees-from-23",
+          "name": "Companion Fare ($99 + taxes and fees from $23)",
+          "trigger": "each account anniversary, after spending $6,000 or more in the prior anniversary year",
+          "notes": "Also: free checked bag and preferred boarding for cardholder and up to 6 guests on the same reservation when the Alaska or Hawaiian flight is paid with the card; $100 off an annual Alaska Lounge+ membership bought with the card."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Read via WebFetch (rendered); raw HTML has no terms."
+        },
+        {
+          "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Aug 20, 2025: Alaska Airlines Visa Signature renamed Atmos Rewards Ascent Visa Signature; existing cardholders get the new card at expiration."
+        },
+        {
+          "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2026/04/alaska-air-group-and-bank-of-america-expand-long-standing-credit.html",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Apr 2026: multi-year extension; BofA 'working toward' becoming the single issuer of all Atmos Rewards co-brand cards. No dates or earn changes announced."
+        },
+        {
+          "url": "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_ascent_visa_signature_english.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Binary PDF; text not extractable with available tools. Fetch works (200, 131,461 bytes). Search summary says fee $95."
+        }
+      ],
+      "open_questions": [
+        "Whether the 10% bonus applies to every eligible BofA account or scales by Preferred Rewards tier is not stated on the product page.",
+        "'Eligible Alaska Airlines and Hawaiian Airlines purchases' is not defined further; assumed to be airline purchases (tickets, fees), not Alaska Vacations or other brands.",
+        "Possible issuer consolidation (BofA as sole co-brand issuer) announced Apr 2026, no effective date.",
+        "Rate fields are points per dollar; the BofA 10% bonus is not in the rate fields."
+      ],
+      "watch": {
+        "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
+        "phrase": "Atmos&trade; Rewards Ascent Visa Signature",
+        "kind": "issuer",
+        "renders_without_js": false,
+        "notes": "Plain GET returns 200 but the body is a single-page-app shell (title, meta description, template JSON only); earn rates and credits are NOT in the raw HTML, so the phrase is only a page-identity check. Detecting term changes needs a rendering fetch (WebFetch rendered it) or the sample-agreement PDF (fee/APR only)."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/boa-alaska-atmos-ascent/",
+        "phrase": "Atmos Ascent"
+      }
+    },
+    {
+      "id": "atmos-summit-visa-infinite",
+      "name": "Atmos Rewards Summit Visa Infinite",
+      "issuer": "Bank of America",
+      "network": "visa",
+      "annual_fee": 395,
+      "currency": "atmos",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x",
+        "notes": "No caps. Eligible BofA account holders get a 10% bonus on card-purchase points (3.3x in the 3x categories); not applied to the rate fields. Also 1 status point per $2 spent."
+      },
+      "earn": [
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3 points per $1 on eligible dining",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "foreign_transactions",
+          "category": "foreign_transactions",
+          "label": "3 points per $1 on eligible foreign transaction purchases",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Product page says 'foreign transaction'; the Aug 2025 press release says 'eligible foreign travel purchases'. Not defined further. Presumably purchases made outside the US.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "brand:alaska",
+          "category": "brand:alaska",
+          "label": "3 points per $1 on Alaska Airlines purchases",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "brand:hawaiian",
+          "category": "brand:hawaiian",
+          "label": "3 points per $1 on Hawaiian Airlines purchases",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "airport-security-statement-credit-tsa-precheck-global-entry",
+          "name": "Airport Security Statement Credit (TSA PreCheck / Global Entry)",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $120 once every four years. Enrollment not stated.",
+          "category_hint": "travel_general"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "alaska-lounge-passes-8",
+          "name": "Alaska Lounge passes (8)",
+          "trigger": "automatic: 8 per calendar year, 2 per quarter",
+          "notes": "Issuer page: 'every calendar year (2 per quarter)'. Press release says each pass covers a full travel day and up to two accompanying children."
+        },
+        {
+          "key": "global-companion-award-25-000-points",
+          "name": "Global Companion Award (25,000 points)",
+          "trigger": "every account anniversary",
+          "notes": "Covers a companion on the same award itinerary; book with points."
+        },
+        {
+          "key": "global-companion-award-100-000-points",
+          "name": "Global Companion Award (100,000 points)",
+          "trigger": "spend $60,000 or more on purchases in the year",
+          "notes": "Earned annually after the spend."
+        },
+        {
+          "key": "50-instant-travel-delay-credit",
+          "name": "$50 Instant Travel Delay Credit",
+          "trigger": "flight cancellation or departure delay of 2 hours or more",
+          "notes": "Event-based, not periodic."
+        },
+        {
+          "key": "10-000-status-points",
+          "name": "10,000 status points",
+          "trigger": "every account anniversary",
+          "notes": "Atmos status points; 20,000 = Atmos Silver and 40,000 = Atmos Gold per the Aug 2025 press release."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Read via WebFetch (rendered); raw HTML has no terms."
+        },
+        {
+          "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Aug 20, 2025 launch release: $395 fee, 3x categories, lounge passes, companion awards."
+        },
+        {
+          "url": "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_summit_visa_infinite_english.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Binary PDF; text not extractable with available tools. Fetch works (200, 131,192 bytes)."
+        },
+        {
+          "url": "https://www.creditcards.com/credit-cards/atmos-rewards-summit-visa-infinite-credit-card",
+          "kind": "third_party",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Search snippet only (not fetched): mentions 8 Wi-Fi passes, not on the issuer page."
+        }
+      ],
+      "open_questions": [
+        "A search snippet claims 8 Wi-Fi passes per year; the issuer page does not mention them. Not included.",
+        "Lounge-pass reset basis: product page says calendar year; the press release says 'per year'. Recorded as calendar year.",
+        "Definition of 'foreign transaction' for the 3x category (merchant location vs currency) is not stated.",
+        "Airport security credit: enrollment/provider terms not on the product page."
+      ],
+      "watch": {
+        "url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+        "phrase": "Atmos&trade; Rewards Summit Visa Infinite",
+        "kind": "issuer",
+        "renders_without_js": false,
+        "notes": "Plain GET returns 200 but the body is a single-page-app shell (title, meta description, template JSON only); earn rates and credits are NOT in the raw HTML, so the phrase is only a page-identity check. Detecting term changes needs a rendering fetch (WebFetch rendered it) or the sample-agreement PDF (fee/APR only)."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/boa-alaska-atmos-summit/",
+        "phrase": "Atmos Summit"
+      }
+    },
+    {
+      "id": "bilt-mastercard-2",
+      "name": "Bilt Blue Card (Bilt Mastercard 2.0, no annual fee tier)",
+      "issuer": "Column N.A. (servicer and program manager: Cardless Inc.)",
+      "network": "mastercard",
+      "annual_fee": 0,
+      "currency": "bilt",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:bilt_partner_dining",
+          "category": "brand:bilt_partner_dining",
+          "label": "Up to 4X at Bilt partner restaurants (20,000+ U.S.)",
+          "rate": 4,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "'Up to'. Dining elsewhere is not listed, so it falls to 1X. Issuer says all multipliers are inclusive of the Bilt loyalty membership and card multiplier.",
+          "confidence": "issuer_verified",
+          "via": "Bilt partner restaurants"
+        },
+        {
+          "key": "hotels@issuer_portal",
+          "category": "hotels",
+          "label": "Up to 3X on hotels booked on the Bilt Travel Portal",
+          "rate": 3,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "Up to 2X on flights booked on the Bilt Travel Portal",
+          "rate": 2,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "brand:lyft@direct",
+          "category": "brand:lyft",
+          "label": "3X on Lyft after linking Bilt and Lyft accounts",
+          "rate": 3,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Lyft (accounts linked)"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "1X on other travel",
+          "rate": 1,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rent@issuer_portal",
+          "category": "rent",
+          "label": "Up to 1.25X on rent and mortgage (Housing-only rewards)",
+          "rate": 1.25,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Rent and mortgage (HOA too) paid via Bilt with no transaction fee. Option 1, Housing-only rewards: multiplier set each billing cycle by everyday spend as a share of the housing payment: 25% = 0.5X, 50% = 0.75X, 75% = 1X, 100% or more = 1.25X; below 25% earns a flat 250 points; points post after statement close. No annual cap on housing payments and no limit on properties.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        },
+        {
+          "key": "rent@issuer_portal#2",
+          "category": "rent",
+          "label": "Up to 1X on rent and mortgage (Flexible Bilt Cash option)",
+          "rate": 1,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Option 2, Flexible Bilt Cash: housing points up to 1X unlocked by redeeming Bilt Cash ($30 of Bilt Cash = 1,000 points); Bilt Cash is earned at 4% on everyday purchases under this option. Bilt Cash expires Dec 31 each year; up to $100 carries over. Choice between options is per the issuer FAQ; exact switching rules not read.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.bilt.com/card",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Footer: 'Cardless Inc. is the servicer of the Bilt Cards... Bilt Cards are issued by Column N.A., Member FDIC, pursuant to license from Mastercard.' 10% intro APR for 12 billing cycles, then 26.74%-34.74% variable."
+        },
+        {
+          "url": "https://thepointsguy.com/credit-cards/new-bilt-cards-2-0",
+          "kind": "guide",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Search snippet only (not fetched): launch coverage of the three-card lineup."
+        }
+      ],
+      "open_questions": [
+        "Which Bilt 2.0 card the user holds is unknown; Blue ($0) is assumed because the original Bilt Mastercard had no annual fee. Obsidian and Palladium entries follow.",
+        "Issuer: bilt.com footer says Column N.A.; launch coverage (via search snippet) said the cards are issued 'in partnership with Cardless, Fidem Financial, and Column N.A.' Cardless is the servicer per the footer.",
+        "The tiered housing multiplier uses everyday spend relative to the housing payment each billing cycle; the app cannot know the final multiplier until the cycle closes.",
+        "The 'up to' ceilings on partner dining (4X/6X/5X) and portal travel are not explained on the page (assumed to depend on the specific partner or booking)."
+      ],
+      "watch": {
+        "url": "https://www.bilt.com/card",
+        "phrase": "Earn up to 1.25X points on rent and mortgage payments",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (200, Next.js server-rendered, all three cards, comparison table and FAQ are in the HTML). Single page covers Blue, Obsidian and Palladium."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/bilt-blue/",
+        "phrase": "Bilt Blue"
+      }
+    },
+    {
+      "id": "bilt-obsidian",
+      "name": "Bilt Obsidian Card (Bilt 2.0, $95 tier)",
+      "issuer": "Column N.A. (servicer and program manager: Cardless Inc.)",
+      "network": "mastercard",
+      "annual_fee": 95,
+      "currency": "bilt",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x",
+        "notes": "Bilt Cash can unlock a point accelerator adding 1X to category spend up to $5,000 for Obsidian and Palladium (Bilt FAQ)."
+      },
+      "earn": [
+        {
+          "key": "brand:bilt_partner_dining",
+          "category": "brand:bilt_partner_dining",
+          "label": "Up to 6X at Bilt partner restaurants (20,000+ U.S.)",
+          "rate": 6,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt partner restaurants"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3X dining (choose dining or grocery)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Issuer: 'Other dining or grocery - your choice'. Only one of dining or grocery gets 3X.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "groceries",
+          "category": "groceries",
+          "label": "3X groceries (choose dining or grocery)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": {
+            "amount": 25000,
+            "period": "year",
+            "after_cap_rate": null
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Grocery up to $25K/year; rate after the cap is not stated. Only one of dining or grocery gets 3X.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "hotels@issuer_portal",
+          "category": "hotels",
+          "label": "Up to 4X on hotels booked on the Bilt Travel Portal",
+          "rate": 4,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "Up to 3X on flights booked on the Bilt Travel Portal",
+          "rate": 3,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "brand:lyft@direct",
+          "category": "brand:lyft",
+          "label": "3X on Lyft after linking Bilt and Lyft accounts",
+          "rate": 3,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Lyft (accounts linked)"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "2X on other travel",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rent@issuer_portal",
+          "category": "rent",
+          "label": "Up to 1.25X on rent and mortgage (Housing-only rewards)",
+          "rate": 1.25,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Rent and mortgage (HOA too) paid via Bilt with no transaction fee. Option 1, Housing-only rewards: multiplier set each billing cycle by everyday spend as a share of the housing payment: 25% = 0.5X, 50% = 0.75X, 75% = 1X, 100% or more = 1.25X; below 25% earns a flat 250 points; points post after statement close. No annual cap on housing payments and no limit on properties.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        },
+        {
+          "key": "rent@issuer_portal#2",
+          "category": "rent",
+          "label": "Up to 1X on rent and mortgage (Flexible Bilt Cash option)",
+          "rate": 1,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Option 2, Flexible Bilt Cash: housing points up to 1X unlocked by redeeming Bilt Cash ($30 of Bilt Cash = 1,000 points); Bilt Cash is earned at 4% on everyday purchases under this option. Bilt Cash expires Dec 31 each year; up to $100 carries over. Choice between options is per the issuer FAQ; exact switching rules not read.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "bilt-travel-hotel-credit",
+          "name": "Bilt Travel Hotel Credit",
+          "benefit_type": "bilt_travel_hotel",
+          "stack": "per_card",
+          "amount": 50,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "$100/yr applied twice a year as $50 statement credits for qualifying Bilt Travel Portal hotel bookings. Reset basis not stated.",
+          "category_hint": "hotels"
+        }
+      ],
+      "certificates": [],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.bilt.com/card",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Footer: 'Cardless Inc. is the servicer of the Bilt Cards... Bilt Cards are issued by Column N.A., Member FDIC, pursuant to license from Mastercard.' 10% intro APR for 12 billing cycles, then 26.74%-34.74% variable."
+        },
+        {
+          "url": "https://thepointsguy.com/credit-cards/new-bilt-cards-2-0",
+          "kind": "guide",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Search snippet only (not fetched): launch coverage of the three-card lineup."
+        }
+      ],
+      "open_questions": [
+        "Included only in case the user's Bilt card is Obsidian; see bilt-mastercard-2 questions.",
+        "Rate after the $25K/yr grocery cap is not stated."
+      ],
+      "watch": {
+        "url": "https://www.bilt.com/card",
+        "phrase": "Earn up to 1.25X points on rent and mortgage payments",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (200, Next.js server-rendered, all three cards, comparison table and FAQ are in the HTML). Single page covers Blue, Obsidian and Palladium."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/bilt-obsidian/",
+        "phrase": "Bilt Obsidian"
+      }
+    },
+    {
+      "id": "bilt-palladium",
+      "name": "Bilt Palladium Card (Bilt 2.0, $495 tier)",
+      "issuer": "Column N.A. (servicer and program manager: Cardless Inc.)",
+      "network": "mastercard",
+      "annual_fee": 495,
+      "currency": "bilt",
+      "base_rate": {
+        "rate": 2,
+        "unit": "x",
+        "notes": "Bilt Cash can unlock a point accelerator adding 1X to category spend up to $5,000 (Bilt FAQ)."
+      },
+      "earn": [
+        {
+          "key": "brand:bilt_partner_dining",
+          "category": "brand:bilt_partner_dining",
+          "label": "Up to 5X at Bilt partner restaurants (20,000+ U.S.)",
+          "rate": 5,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt partner restaurants"
+        },
+        {
+          "key": "hotels@issuer_portal",
+          "category": "hotels",
+          "label": "Up to 4X on hotels booked on the Bilt Travel Portal",
+          "rate": 4,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "Up to 3X on flights booked on the Bilt Travel Portal",
+          "rate": 3,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Bilt Travel Portal"
+        },
+        {
+          "key": "brand:lyft@direct",
+          "category": "brand:lyft",
+          "label": "4X on Lyft after linking Bilt and Lyft accounts",
+          "rate": 4,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Lyft (accounts linked)"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "2X on other travel",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rent@issuer_portal",
+          "category": "rent",
+          "label": "Up to 1.25X on rent and mortgage (Housing-only rewards)",
+          "rate": 1.25,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Rent and mortgage (HOA too) paid via Bilt with no transaction fee. Option 1, Housing-only rewards: multiplier set each billing cycle by everyday spend as a share of the housing payment: 25% = 0.5X, 50% = 0.75X, 75% = 1X, 100% or more = 1.25X; below 25% earns a flat 250 points; points post after statement close. No annual cap on housing payments and no limit on properties.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        },
+        {
+          "key": "rent@issuer_portal#2",
+          "category": "rent",
+          "label": "Up to 1X on rent and mortgage (Flexible Bilt Cash option)",
+          "rate": 1,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Option 2, Flexible Bilt Cash: housing points up to 1X unlocked by redeeming Bilt Cash ($30 of Bilt Cash = 1,000 points); Bilt Cash is earned at 4% on everyday purchases under this option. Bilt Cash expires Dec 31 each year; up to $100 carries over. Choice between options is per the issuer FAQ; exact switching rules not read.",
+          "confidence": "issuer_verified",
+          "via": "paid through Bilt"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "bilt-travel-hotel-credit",
+          "name": "Bilt Travel Hotel Credit",
+          "benefit_type": "bilt_travel_hotel",
+          "stack": "per_card",
+          "amount": 200,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "$400/yr applied twice a year as $200 statement credits for qualifying Bilt Travel Portal hotel bookings. Reset basis not stated.",
+          "category_hint": "hotels"
+        },
+        {
+          "key": "annual-bilt-cash",
+          "name": "Annual Bilt Cash",
+          "benefit_type": "bilt_cash",
+          "stack": "per_card",
+          "amount": 200,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "$200 of Bilt Cash awarded annually; Bilt Cash expires Dec 31 each calendar year, up to $100 carries over. Redeemable at Bilt partners (Lyft, Bilt Travel hotels, SoulCycle, Grubhub, Walgreens, GoPuff).",
+          "category_hint": null
+        }
+      ],
+      "certificates": [
+        {
+          "key": "priority-pass-membership-worth-469-yr",
+          "name": "Priority Pass membership (worth $469/yr)",
+          "trigger": "included with the card",
+          "notes": "Listed in the comparison table as Palladium only; enrollment steps not read."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.bilt.com/card",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Footer: 'Cardless Inc. is the servicer of the Bilt Cards... Bilt Cards are issued by Column N.A., Member FDIC, pursuant to license from Mastercard.' 10% intro APR for 12 billing cycles, then 26.74%-34.74% variable."
+        },
+        {
+          "url": "https://thepointsguy.com/credit-cards/new-bilt-cards-2-0",
+          "kind": "guide",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Search snippet only (not fetched): launch coverage of the three-card lineup."
+        }
+      ],
+      "open_questions": [
+        "Included only in case the user's Bilt card is Palladium; see bilt-mastercard-2 questions."
+      ],
+      "watch": {
+        "url": "https://www.bilt.com/card",
+        "phrase": "Earn up to 1.25X points on rent and mortgage payments",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (200, Next.js server-rendered, all three cards, comparison table and FAQ are in the HTML). Single page covers Blue, Obsidian and Palladium."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/bilt-palladium/",
+        "phrase": "Bilt Palladium"
+      }
+    },
+    {
+      "id": "bofa-premium-rewards-elite",
+      "name": "Bank of America Premium Rewards Elite",
+      "issuer": "Bank of America",
+      "network": "visa",
+      "annual_fee": 550,
+      "currency": "bofa_points",
+      "base_rate": {
+        "rate": 1.5,
+        "unit": "x",
+        "notes": "BofA Rewards (Preferred Rewards) bonus of 10%-75% more points (AwardWallet, TPG: 75% = 3.5x travel and dining, 2.625x other). The issuer page says only that BofA Rewards members earn bonus rewards. Not applied to the rate fields."
+      },
+      "earn": [
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "2 points per $1 on travel and dining purchases",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Issuer does not define dining or travel merchants. Unlimited, no cap.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "2 points per $1 on travel and dining purchases",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Per NerdWallet (via search snippet, not issuer): travel covers airlines, hotels/motels/timeshares, car rental, cruise lines, travel agencies, tour operators, parking, tolls, tourist attractions. Unverified against BofA's list.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "airfare",
+          "category": "airfare",
+          "label": "2 points per $1 on travel (airlines)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Included in the broad travel definition per third-party list.",
+          "confidence": "third_party_only"
+        },
+        {
+          "key": "hotels",
+          "category": "hotels",
+          "label": "2 points per $1 on travel (hotels)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Included in the broad travel definition per third-party list.",
+          "confidence": "third_party_only"
+        },
+        {
+          "key": "car_rental",
+          "category": "car_rental",
+          "label": "2 points per $1 on travel (car rental)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Included in the broad travel definition per third-party list.",
+          "confidence": "third_party_only"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "airline-incidental-statement-credit",
+          "name": "Airline Incidental Statement Credit",
+          "benefit_type": "bofa_airline_incidentals",
+          "stack": "per_card",
+          "amount": 300,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $300 annually for airline incidentals (seat upgrades, baggage fees, lounge fees, in-flight services); not airfare. Calendar-year reset and the excluded airlines (Allegiant, Spirit, Sun Country) are from AwardWallet, not the issuer page.",
+          "category_hint": "airfare"
+        },
+        {
+          "key": "lifestyle-conveniences-credit",
+          "name": "Lifestyle Conveniences Credit",
+          "benefit_type": "bofa_lifestyle",
+          "stack": "per_card",
+          "amount": 150,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $150 annually: video streaming, food delivery, fitness subscriptions, rideshare. Not monthly (AwardWallet). Calendar-year reset is from AwardWallet.",
+          "category_hint": "streaming"
+        },
+        {
+          "key": "global-entry-tsa-precheck-credit",
+          "name": "Global Entry / TSA PreCheck Credit",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $120 in statement credits for application fees, every four years.",
+          "category_hint": "travel_general"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "priority-pass-select-membership-up-to-4",
+          "name": "Priority Pass Select membership (up to 4)",
+          "trigger": "enroll up to 4 members at no charge",
+          "notes": "Per AwardWallet, enrolled members need not be authorized users; issuer page says 'up to 4 complimentary Priority Pass Select Memberships'."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "third_party_only",
+      "sources": [
+        {
+          "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Read via WebFetch (rendered): $550 fee, 2x/1.5x, credit amounts. Page also showed a 'temporarily unavailable' notice while still displaying details."
+        },
+        {
+          "url": "https://awardwallet.com/credit-cards/bank-of-america/premium-rewards-elite/",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Reset basis, BofA Rewards tiers, Priority Pass terms; says offers updated as of 10/01/2026."
+        },
+        {
+          "url": "https://thepointsguy.com/credit-cards/reviews/bank-of-america-premium-rewards-elite-credit-card-review-a-formidable-contender/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Confirms 2x/1.5x, $550, bonus tiers 10/25/50/75%; dated July 15, 2025."
+        },
+        {
+          "url": "https://www.nerdwallet.com/article/credit-cards/5-things-to-know-about-the-bank-of-america-premium-rewards-elite-credit-card",
+          "kind": "third_party",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Search snippet only (not fetched): list of merchant types counted as travel."
+        }
+      ],
+      "open_questions": [
+        "Issuer page does not define the travel and dining categories; the travel sub-categories (airfare, hotels, car_rental) and dining boundaries rest on a third-party snippet.",
+        "Credit reset basis (calendar vs anniversary year) and enrollment are not on the issuer page; calendar year is from AwardWallet only.",
+        "Preferred Rewards/BofA Rewards bonus by tier is third-party; the user's bonus depends on their BofA balances."
+      ],
+      "watch": {
+        "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+        "phrase": "Premium Rewards&reg; Elite Credit Card",
+        "kind": "issuer",
+        "renders_without_js": false,
+        "notes": "Plain GET returns 200 but the body is a single-page-app shell (title, meta description, template JSON only); earn rates and credits are NOT in the raw HTML, so the phrase is only a page-identity check. Detecting term changes needs a rendering fetch (WebFetch rendered it) or the sample-agreement PDF (fee/APR only)."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/boa-premium-rewards-elite/",
+        "phrase": "Premium Rewards Elite"
+      }
+    },
+    {
+      "id": "capital-one-venture-x",
+      "name": "Capital One Venture X Rewards",
+      "issuer": "Capital One",
+      "network": "visa",
+      "annual_fee": 395,
+      "currency": "c1_miles",
+      "base_rate": {
+        "rate": 2,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "hotels@issuer_portal",
+          "category": "hotels",
+          "label": "10X miles on hotels booked through Capital One Travel",
+          "rate": 10,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited. Capital One Travel is brand:capital_one_travel.",
+          "confidence": "issuer_verified",
+          "via": "Capital One Travel portal"
+        },
+        {
+          "key": "car_rental@issuer_portal",
+          "category": "car_rental",
+          "label": "10X miles on rental cars booked through Capital One Travel",
+          "rate": 10,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited.",
+          "confidence": "issuer_verified",
+          "via": "Capital One Travel portal"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "5X miles on flights booked through Capital One Travel",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited.",
+          "confidence": "issuer_verified",
+          "via": "Capital One Travel portal"
+        },
+        {
+          "key": "vacation_rentals@issuer_portal",
+          "category": "vacation_rentals",
+          "label": "5X miles on vacation rentals booked through Capital One Travel",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited.",
+          "confidence": "issuer_verified",
+          "via": "Capital One Travel portal"
+        },
+        {
+          "key": "entertainment@issuer_portal",
+          "category": "entertainment",
+          "label": "5X miles on Capital One Entertainment purchases",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Footnoted on the product page and listed in Capital One's 2026-09-08 Venture X article.",
+          "confidence": "issuer_verified",
+          "via": "Capital One Entertainment ticketing platform"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "annual-capital-one-travel-credit",
+          "name": "Annual Capital One Travel credit",
+          "benefit_type": "capital_one_travel",
+          "stack": "per_card",
+          "amount": 300,
+          "period": "year",
+          "resets": "cardmember_year",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Primary cardholder; used on purchases made through Capital One Travel; each annual credit expires on the next account-open-date anniversary; no rewards earned on the credit amount. Whether it applies at checkout vs as a statement credit differs between third-party sources.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "global-entry-tsa-precheck-fee-credit",
+          "name": "Global Entry / TSA PreCheck fee credit",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Up to $120 when the application fee is paid with the card; one per account every four years; posts within two billing cycles; applies to whichever program is applied for first.",
+          "category_hint": "travel_general"
+        }
+      ],
+      "certificates": [],
+      "other_benefits": [
+        "10,000 bonus miles every year starting on the first anniversary (valued at $100 toward travel by Upgraded Points); not available if a new-cardmember bonus on Venture X was received in the past 48 months",
+        "Premier Collection (Capital One Travel): up to $100 experience credit per stay plus breakfast for two, upgrades when available; Lifestyle Collection: up to $50 per stay",
+        "Priority Pass (1,300+ lounges, enrollment required) and Capital One Lounges/Landings; free guest access ended 2026-02-01 (guests paid, or free at $75,000 annual spend per third-party report)",
+        "Hertz President's Circle status (enroll via Capital One benefits tab)",
+        "Cell phone protection up to $800 when the phone bill is paid with the card",
+        "Authorized users: $125 per year for lounge access per third-party report"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.capitalone.com/learn-grow/more-than-money/all-about-venture-x/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.capitalone.com/credit-cards/compare/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.capitalone.com/credit-cards/venture-x/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://upgradedpoints.com/credit-cards/reviews/capital-one-venture-x/benefits-history/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Portal earning is modeled by product category (hotels, car_rental, airfare, vacation_rentals) with via='Capital One Travel portal' rather than a single brand:capital_one_travel row, because rates differ by product; other Capital One Travel purchases earn the 2X base.",
+        "Credit mechanics (checkout application vs later statement credit) differ across sources; the amount, annual cadence and anniversary expiry are from Capital One's disclosures."
+      ],
+      "watch": {
+        "url": "https://www.capitalone.com/learn-grow/more-than-money/all-about-venture-x/",
+        "phrase": "10X",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works and the raw text includes fee, 10X/5X/2X rates, the $300 credit and the 10,000-mile anniversary bonus (article dated 2026-09-08). The product page https://www.capitalone.com/credit-cards/venture-x/ also returns 200 (972 KB) and contains '10X' in raw HTML, but its static text lacks the annual fee, $300 credit and anniversary bonus (rendered client-side), so the article page is the better watch target even though it is editorial."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/capital-one-venture-x/",
+        "phrase": "Venture X"
+      }
+    },
+    {
+      "id": "chase-marriott-bonvoy-boundless",
+      "name": "Marriott Bonvoy Boundless",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 95,
+      "currency": "marriott",
+      "base_rate": {
+        "rate": 2,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:marriott@direct",
+          "category": "brand:marriott",
+          "label": "6x at participating Marriott Bonvoy hotels",
+          "rate": 6,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Chase's 'up to 17x' headline adds up to 10x Bonvoy member earn and 1x Silver Elite bonus, which post to the Marriott account, not the Chase statement. Rate shown is the card's own.",
+          "confidence": "issuer_verified",
+          "via": "purchases at participating Marriott Bonvoy hotels",
+          "rate_incl_loyalty_earn": 17
+        },
+        {
+          "key": "groceries",
+          "category": "groceries",
+          "label": "3x on grocery stores (first $6,000 combined per year)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": {
+            "amount": 6000,
+            "period": "year",
+            "after_cap_rate": 2,
+            "group": "groceries_gas_dining"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "$6,000 limit is combined across grocery, gas and dining. Chase's page defers to its Rewards Category FAQ for the grocery definition (supermarkets; warehouse clubs and discount stores excluded).",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "3x on gas stations (first $6,000 combined per year)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": {
+            "amount": 6000,
+            "period": "year",
+            "after_cap_rate": 2,
+            "group": "groceries_gas_dining"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Shared $6,000 combined cap.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3x on dining incl. takeout (first $6,000 combined per year)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": {
+            "amount": 6000,
+            "period": "year",
+            "after_cap_rate": 2,
+            "group": "groceries_gas_dining"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Shared $6,000 combined cap.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "doordash-non-restaurant-discount",
+          "name": "DoorDash non-restaurant discount",
+          "benefit_type": "doordash_non_restaurant",
+          "stack": "once",
+          "amount": 10,
+          "period": "quarter",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2027-12-31",
+          "notes": "$10 off one qualifying non-restaurant order per calendar quarter at checkout while enrolled in DashPass (complimentary DashPass activate by 2027-12-31); subtotal only; unused value forfeited; not a statement credit.",
+          "category_hint": "online_groceries"
+        },
+        {
+          "key": "airline-statement-credit-limited-time-cardmember-offer",
+          "name": "Airline statement credit (limited-time cardmember offer)",
+          "benefit_type": "boundless_airline_offer",
+          "stack": "per_card",
+          "amount": 50,
+          "period": "half_year",
+          "resets": null,
+          "enrollment_required": false,
+          "valid_from": "2026-06-04",
+          "valid_to": "2027-06-30",
+          "windows": [
+            {
+              "from": "2026-06-04",
+              "to": "2026-12-31"
+            },
+            {
+              "from": "2027-01-01",
+              "to": "2027-06-30"
+            }
+          ],
+          "notes": "Two $50 statement credits: spend $250 directly with airlines between 2026-06-04 and 2026-12-31, and another $250 between 2027-01-01 and 2027-06-30 (page: 'Special Offer through 6/30/2027', up to $100 total). Eligibility (all cardmembers vs new/targeted) is not stated on the page.",
+          "category_hint": "airfare"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "annual-free-night-award-up-to-35-000-points-per-night",
+          "name": "Annual Free Night Award (up to 35,000 points per night)",
+          "trigger": "card anniversary",
+          "notes": "One night; issued within up to 8 weeks after account anniversary; expires 12 months after issue; resort fees are the cardholder's responsibility."
+        }
+      ],
+      "other_benefits": [
+        "Automatic Marriott Bonvoy Silver Elite each calendar year",
+        "15 Elite Night Credits each calendar year (deposited by March 1) plus 1 per $5,000 spent; Path to Gold at $35,000 calendar-year spend",
+        "No foreign transaction fees"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.chase.com/RewardsCategoryFAQs",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Whether the $6,000 combined cap resets on the calendar year or the cardmember year is not stated ('annually'); modeled as 'year'.",
+        "Boundless grocery exclusions beyond the generic Chase 'grocery stores' definition (e.g., Target/Walmart in-store) are not stated on the card page."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+        "phrase": "6X",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works. Byte length varies by 1-2 bytes between identical requests."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-marriott-premier-plus/",
+        "phrase": "Marriott Bonvoy Boundless"
+      }
+    },
+    {
+      "id": "chase-prime-visa",
+      "name": "Prime Visa (Amazon Prime Rewards Visa Signature)",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 0,
+      "currency": "cash",
+      "base_rate": {
+        "rate": 1,
+        "unit": "%"
+      },
+      "earn": [
+        {
+          "key": "brand:amazon",
+          "category": "brand:amazon",
+          "label": "Amazon.com (incl. Amazon Fresh) and Audible.com",
+          "rate": 5,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Requires an eligible Amazon Prime membership at time of purchase; 3% without Prime. Unlimited. Excludes Amazon Pay at third-party merchants and international Amazon sites.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "brand:whole_foods",
+          "category": "brand:whole_foods",
+          "label": "Whole Foods Market",
+          "rate": 5,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Requires eligible Prime membership; 3% without. International Whole Foods locations excluded.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "travel_general@issuer_portal",
+          "category": "travel_general",
+          "label": "Chase Travel purchases",
+          "rate": 5,
+          "unit": "%",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Requires eligible Prime membership; 3% without. Not earned on purchases made directly with airlines, hotels, car rental companies or cruise lines.",
+          "confidence": "issuer_verified",
+          "via": "Chase Travel portal"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "Gas stations",
+          "rate": 2,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "Restaurants",
+          "rate": 2,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "transit",
+          "category": "transit",
+          "label": "Local transit and commuting",
+          "rate": 2,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Unlimited. Chase says this includes rideshare.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rideshare",
+          "category": "rideshare",
+          "label": "Local transit and commuting (including rideshare)",
+          "rate": 2,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Same 2% bucket as transit.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [
+        "Prime Card Bonus: 10% back or more on a rotating selection of Amazon.com items (promotional periods only; Amazon Fresh excluded)",
+        "New cardmember offer: $150 Amazon gift card on approval"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GHJG8KU6QURQMMUU",
+          "kind": "issuer",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Drugstores are NOT a 2% category on the current Chase page (older third-party material listed it for the non-Prime Amazon Visa); recorded as not earning.",
+        "5% rates assume the user has an active, eligible Prime membership; without it the 5% rows become 3%."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards",
+        "phrase": "Whole Foods",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works. Page is large (1.58 MB) and includes embedded offer data; Chase pages vary by +/-1-2 bytes between identical requests, so do not compare raw byte length; hash extracted text around the earn section instead."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-amazon-prime/",
+        "phrase": "Amazon Prime"
+      }
+    },
+    {
+      "id": "chase-sapphire-preferred",
+      "name": "Chase Sapphire Preferred",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 95,
+      "currency": "chase_ur",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "travel_general@issuer_portal",
+          "category": "travel_general",
+          "label": "5x on Chase Travel purchases",
+          "rate": 5,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "FROSCH / Valerie Wilson / Frosch International bookings do not get 5x (they earn 2x). The first $100 of Chase Travel hotel purchases each year (covered by the hotel credit) earns no points.",
+          "confidence": "issuer_verified",
+          "via": "Chase Travel portal"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3x on dining (incl. takeout and eligible delivery)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": "2026-06-15",
+          "valid_to": null,
+          "notes": "Third-party delivery merchants are excluded by Chase's category FAQ.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "3x on gas stations",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": "2026-06-15",
+          "valid_to": null,
+          "notes": "New in the June 15, 2026 refresh.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "ev_charging",
+          "category": "ev_charging",
+          "label": "3x on electric vehicle charging",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": "2026-06-15",
+          "valid_to": null,
+          "notes": "New in the June 15, 2026 refresh.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "vacation_rentals@direct",
+          "category": "vacation_rentals",
+          "label": "3x on vacation homes at top brands",
+          "rate": 3,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": "2026-06-15",
+          "valid_to": null,
+          "notes": "Merchants selling mixed travel inventory (e.g., OTAs) do not qualify.",
+          "confidence": "issuer_verified",
+          "via": "booked directly with Airbnb, Vrbo, Plum Guide, HomeAway, Homestay.com or Vacasa"
+        },
+        {
+          "key": "streaming",
+          "category": "streaming",
+          "label": "3x on top streaming services",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Select merchants only: Apple Music, Apple TV, Disney+, ESPN+, Fubo TV, Max, Hulu, Netflix, Pandora, Paramount+, Peacock, Showtime, SiriusXM, Sling, Spotify, YouTube Premium, YouTube TV, Vudu (Chase Rewards Category FAQ).",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "online_groceries",
+          "category": "online_groceries",
+          "label": "3x on online grocery (excl. Target, Walmart, wholesale clubs)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "In-store grocery earns 1x.",
+          "confidence": "issuer_verified",
+          "via": "ordered online for pickup/delivery from grocery stores"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "2x on all other travel",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Excludes purchases made through Chase Travel (5x). Gift-card/points-seller merchants do not qualify.",
+          "confidence": "issuer_verified",
+          "covers": [
+            "airfare",
+            "hotels",
+            "car_rental"
+          ]
+        },
+        {
+          "key": "brand:lyft@direct",
+          "category": "brand:lyft",
+          "label": "5x total on Lyft rides",
+          "rate": 5,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": "2027-09-30",
+          "notes": "Promotional.",
+          "confidence": "issuer_verified",
+          "via": "Lyft mobile app"
+        },
+        {
+          "key": "brand:peloton@direct",
+          "category": "brand:peloton",
+          "label": "5x total on Peloton equipment/accessories over $150",
+          "rate": 5,
+          "unit": "x",
+          "channel": "direct",
+          "cap": {
+            "amount": 5000,
+            "period": "promo_period",
+            "after_cap_rate": 1
+          },
+          "valid_from": "2025-04-01",
+          "valid_to": "2027-12-31",
+          "notes": "Promotional. $5,000 total eligible spend over the promo.",
+          "confidence": "issuer_verified",
+          "via": "directly through Peloton"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "chase-travel-hotel-credit",
+          "name": "Chase Travel hotel credit",
+          "benefit_type": "chase_travel_hotel",
+          "stack": "per_card",
+          "amount": 100,
+          "period": "year",
+          "resets": "cardmember_year",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Raised from $50 to $100 on 2026-06-15. Automatic when the card is used for hotel accommodation purchased through Chase Travel; single credit per account-anniversary year; first $100 of such purchases earns no points; may be reversed on returns/cancellations.",
+          "category_hint": "hotels"
+        },
+        {
+          "key": "global-entry-tsa-precheck-nexus-fee-credit",
+          "name": "Global Entry / TSA PreCheck / NEXUS fee credit",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "New with the 2026-06-15 refresh. One credit every four years; must be paid directly to DHS/TSA-authorized providers.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "doordash-non-restaurant-promo",
+          "name": "DoorDash non-restaurant promo",
+          "benefit_type": "doordash_non_restaurant",
+          "stack": "once",
+          "amount": 10,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2029-12-31",
+          "notes": "$10 monthly checkout promo for DashPass members (groceries, retail, etc.), not a statement credit; DashPass must be activated by 2029-12-31.",
+          "category_hint": "online_groceries"
+        }
+      ],
+      "certificates": [],
+      "other_benefits": [
+        "Apple TV complimentary for 12 months if activated by 2026-12-31 (one-time)",
+        "Complimentary DashPass (activate by 2029-12-31)",
+        "Third-party reports (Doctor of Credit, One Mile at a Time) say the 10% anniversary points bonus is eliminated by the refresh and that UR-to-Hyatt transfers drop to 4:3 for existing cardmembers from 2026-10-01; neither is stated on Chase's page",
+        "Refresh effective 2026-06-15 for new cardmembers and for existing cardmembers' positive changes"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.chase.com/RewardsCategoryFAQs",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://doctorofcredit.com/chase-sapphire-preferred-adds-100-hotel-credit-3x-gas-tsa-ge-benefit-appletv-more-same-95-fee",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://onemileatatime.com/news/chase-sapphire-preferred-changes",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "'vacation_rentals' is not in the category vocabulary; added as a new plain category.",
+        "Whether the 10% anniversary bonus still applies to existing cardmembers before/after 2026-10-01 is third-party only; the Chase page does not mention it, so it is not modeled."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+        "phrase": "$95",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works. Byte length varies by 1-2 bytes between identical requests; hash extracted text instead."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-sapphire-preferred/",
+        "phrase": "Sapphire Preferred"
+      }
+    },
+    {
+      "id": "chase-sapphire-reserve",
+      "name": "Chase Sapphire Reserve",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 795,
+      "currency": "chase_ur",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "travel_general@issuer_portal",
+          "category": "travel_general",
+          "label": "8x on purchases through Chase Travel (incl. The Edit)",
+          "rate": 8,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Bookings through FROSCH by Chase Travel, Valerie Wilson Travel by Chase Travel or Frosch International Travel LLC do not qualify. Purchases covered by the $300 travel credit or $500 Edit credit earn no points.",
+          "confidence": "issuer_verified",
+          "via": "Chase Travel portal"
+        },
+        {
+          "key": "airfare@direct",
+          "category": "airfare",
+          "label": "4x on flights booked directly with the airline",
+          "rate": 4,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Reserve Travel Designers bookings earn 4x only if booked directly with the airline.",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the airline"
+        },
+        {
+          "key": "hotels@direct",
+          "category": "hotels",
+          "label": "4x on hotels booked directly",
+          "rate": 4,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Reserve Travel Designers bookings earn 4x only if booked directly with the hotel.",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the hotel"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3x on dining worldwide (incl. takeout and eligible delivery)",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Chase's category FAQ excludes third-party delivery merchants.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "brand:lyft@direct",
+          "category": "brand:lyft",
+          "label": "5x total on Lyft rides",
+          "rate": 5,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": "2027-09-30",
+          "notes": "Promotional. Excludes gift cards, car rentals, vehicle service centers.",
+          "confidence": "issuer_verified",
+          "via": "Lyft mobile app"
+        },
+        {
+          "key": "brand:peloton@direct",
+          "category": "brand:peloton",
+          "label": "10x total on Peloton equipment/accessories over $150",
+          "rate": 10,
+          "unit": "x",
+          "channel": "direct",
+          "cap": {
+            "amount": 5000,
+            "period": "promo_period",
+            "after_cap_rate": 1
+          },
+          "valid_from": null,
+          "valid_to": "2027-12-31",
+          "notes": "Promotional. $5,000 is total eligible spend over the whole promo, not per year.",
+          "confidence": "issuer_verified",
+          "via": "directly through Peloton"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "annual-travel-credit",
+          "name": "Annual travel credit",
+          "benefit_type": "csr_travel",
+          "stack": "per_card",
+          "amount": 300,
+          "period": "year",
+          "resets": "cardmember_year",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Automatic statement credit on any purchase in the travel category (gift cards and points/miles purchases excluded). Annual period starts at account open date and runs through the first statement after the anniversary. Purchases covered earn no points.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "the-edit-hotel-credit",
+          "name": "The Edit hotel credit",
+          "benefit_type": "chase_the_edit",
+          "stack": "per_card",
+          "amount": 500,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Up to $250 per prepaid 'Pay Now' stay of 2+ nights booked through Chase Travel at The Edit properties, max $500 per calendar year; applies from 1/1/2026.",
+          "category_hint": "hotels"
+        },
+        {
+          "key": "dining-credit-sapphire-reserve-exclusive-tables",
+          "name": "Dining credit (Sapphire Reserve Exclusive Tables)",
+          "benefit_type": "chase_exclusive_tables",
+          "stack": "per_card",
+          "amount": 150,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": null,
+          "notes": "$150 Jan-Jun and $150 Jul-Dec ($300 per calendar year) at participating Exclusive Tables restaurants via OpenTable; Chase must identify the purchase as made directly with the restaurant; third-party delivery and gift cards do not qualify. OpenTable eligibility check applies; benefit term through 2030-06-30.",
+          "category_hint": "dining"
+        },
+        {
+          "key": "stubhub-viagogo-credit",
+          "name": "StubHub / viagogo credit",
+          "benefit_type": "stubhub",
+          "stack": "per_card",
+          "amount": 150,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2027-12-31",
+          "notes": "$150 Jan-Jun and $150 Jul-Dec ($300 per calendar year) through 2027-12-31. One-time activation on chase.com or the Chase app. Gift cards and UK-event purchases via StubHub International excluded.",
+          "category_hint": "entertainment"
+        },
+        {
+          "key": "lyft-credit",
+          "name": "Lyft credit",
+          "benefit_type": "lyft",
+          "stack": "unknown",
+          "amount": 10,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2027-09-30",
+          "notes": "$10 per calendar month in-app, through 2027-09-30; card must be the payment method in the Lyft app; unused value is forfeited monthly.",
+          "category_hint": "rideshare"
+        },
+        {
+          "key": "peloton-membership-credit",
+          "name": "Peloton membership credit",
+          "benefit_type": "peloton",
+          "stack": "once",
+          "amount": 10,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2027-12-31",
+          "notes": "Up to $10 per month ($120 per calendar year) on eligible Peloton memberships through 2027-12-31. One-time activation on chase.com/app plus a sign-up via the Chase Peloton promotion page.",
+          "category_hint": "fitness"
+        },
+        {
+          "key": "global-entry-tsa-precheck-nexus-fee-credit",
+          "name": "Global Entry / TSA PreCheck / NEXUS fee credit",
+          "benefit_type": "trusted_traveler",
+          "stack": "once",
+          "amount": 120,
+          "period": "four_years",
+          "resets": null,
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "One credit every four years after the application fee is charged to the card; must be paid directly with the government program/eligible partner, not via third parties.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "doordash-restaurant-promo",
+          "name": "DoorDash restaurant promo",
+          "benefit_type": "doordash_restaurant",
+          "stack": "once",
+          "amount": 15,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2029-12-31",
+          "notes": "Checkout promo (not a statement credit) for DashPass members on one qualifying DoorDash order per month, through 2029-12-31. Complimentary DashPass must be activated by 2029-12-31.",
+          "category_hint": "dining"
+        },
+        {
+          "key": "doordash-non-restaurant-promos-two-10",
+          "name": "DoorDash non-restaurant promos (two $10)",
+          "benefit_type": "doordash_non_restaurant",
+          "stack": "once",
+          "amount": 20,
+          "period": "month",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2029-12-31",
+          "notes": "Two $10 monthly promos on non-restaurant orders (groceries, retail), each on a separate order; checkout promo, not a statement credit; through 2029-12-31.",
+          "category_hint": "online_groceries"
+        }
+      ],
+      "certificates": [],
+      "other_benefits": [
+        "Apple TV and Apple Music complimentary for at least 12 months (activate by 2027-06-22)",
+        "Priority Pass (1,300+ lounges) and Chase Sapphire Lounges by The Club; guests up to 2",
+        "IHG One Rewards Platinum Elite through 2027-12-31 (link IHG account)",
+        "$75,000 calendar-year spend unlocks Hyatt Explorist, IHG Diamond Elite, $250 Shops at Chase credit, $500 Southwest Chase Travel credit, Southwest A-List",
+        "Points worth 1 cent each via Chase Travel; Points Boost up to 2 cents on select Chase Travel flights/hotels",
+        "Additional authorized users cost $195 each"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.chase.com/RewardsCategoryFAQs",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "'promo_period' used as a cap period for the Peloton $5,000 total-spend cap (not in the stated period enum).",
+        "Credits with period 'four_years' have resets=null (neither calendar nor cardmember year).",
+        "Assumes the user's card is the post-June-2025 refreshed Reserve ($795), not a legacy $550 card; the page does not describe legacy terms."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+        "phrase": "$795",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works; raw HTML contains the full benefits text (earn rates, credits, DashPass/DoorDash wording). Byte length varies by 1-2 bytes between identical requests; use a hash of extracted benefit text, not raw length."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-sapphire-reserve/",
+        "phrase": "Sapphire Reserve"
+      }
+    },
+    {
+      "id": "chase-united-gateway",
+      "name": "United Gateway Card",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 0,
+      "currency": "united",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:united@direct",
+          "category": "brand:united",
+          "label": "5x total miles on eligible United flights (2x card miles on the entire United purchase + 3x MileagePlus-member miles on the fare)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "rate = the card's own multiplier. Chase headline is 5x total on eligible United flights (3x fare miles accrue to the MileagePlus member via any form of payment). Basic Economy / base-option fares earn differently; Premier members earn more. After $10,000 of purchases in a calendar year Chase advertises 8x total (2x entire purchase + 6x on the MileagePlus fare); third-party coverage says the 3x general-member fare rate applies to tickets issued from 2026-04-02 and 6x with an eligible card. Same rate also: 2x miles on all other eligible United purchases",
+          "confidence": "issuer_verified",
+          "via": "purchased from United",
+          "rate_incl_loyalty_earn": 5
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "2x miles at gas stations",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "transit",
+          "category": "transit",
+          "label": "2x miles on local transit and commuting",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Chase lists ride share, taxicabs, train tickets, tolls and mass transit.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rideshare",
+          "category": "rideshare",
+          "label": "2x miles on local transit and commuting (ride share)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Same 2x bucket as transit.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [
+        {
+          "key": "2-first-standard-checked-bag-certificates",
+          "name": "2 first-standard-checked-bag certificates",
+          "trigger": "spend $10,000 in a calendar year",
+          "notes": "Certificates post to MileagePlus 6-8 weeks after qualifying; valid only on United / United Express flights; each expires 12 months after issue."
+        }
+      ],
+      "other_benefits": [
+        "25% back as statement credit on food, beverages and Wi-Fi bought on board United-operated flights and on Club premium drinks (posts within 24 hours)",
+        "10% fewer miles on United award flights after $10,000 calendar-year purchases (15% for Premier members)",
+        "No foreign transaction fees"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.nerdwallet.com/travel/news/united-2026-mileage-changes",
+          "kind": "third_party",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Modeled the card-attributable rate (2x) for United purchases; the 5x/8x totals include MileagePlus fare miles whose multipliers changed on 2026-04-02 per third-party coverage (not confirmed on Chase's page beyond the 3x/6x wording).",
+        "Gas/transit merchant definitions beyond Chase's examples are in Chase's Rewards Category FAQ; not separately modeled."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+        "phrase": "2x",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works; earn text present in raw HTML. Byte length varies by 1-2 bytes between identical requests. The URL creditcards.chase.com/travel-credit-cards/united/united-gateway-card returns 404 via WebFetch."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-united-gateway/",
+        "phrase": "UA Gateway"
+      }
+    },
+    {
+      "id": "chase-world-of-hyatt",
+      "name": "World of Hyatt Credit Card",
+      "issuer": "Chase",
+      "network": "visa",
+      "annual_fee": 95,
+      "currency": "hyatt",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:hyatt@direct",
+          "category": "brand:hyatt",
+          "label": "4 Bonus Points per $1 at Hyatt hotels and resorts (up to 9x total with World of Hyatt base points)",
+          "rate": 4,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Up to 5 base points per $1 come from World of Hyatt membership tier, not from the card.",
+          "confidence": "issuer_verified",
+          "via": "qualifying purchases at Hyatt hotels and resorts",
+          "rate_incl_loyalty_earn": 9
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "2x on restaurants",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Excludes dining that qualifies for the 4x Hyatt rate.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "airfare@direct",
+          "category": "airfare",
+          "label": "2x on airline tickets purchased directly from the airline",
+          "rate": 2,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "purchased directly from the airline"
+        },
+        {
+          "key": "transit",
+          "category": "transit",
+          "label": "2x on local transit and commuting",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Chase page lists taxis, mass transit, tolls, parking, ride-share.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "rideshare",
+          "category": "rideshare",
+          "label": "2x on local transit and commuting (ride-share)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Same 2x bucket as transit.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "fitness",
+          "category": "fitness",
+          "label": "2x on fitness club and gym memberships",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "doordash-non-restaurant-discount",
+          "name": "DoorDash non-restaurant discount",
+          "benefit_type": "doordash_non_restaurant",
+          "stack": "once",
+          "amount": 10,
+          "period": "quarter",
+          "resets": "calendar",
+          "enrollment_required": true,
+          "valid_to": "2027-12-31",
+          "notes": "Up to $10 off one non-restaurant DoorDash order per quarter (subtotal only; unused value forfeited); requires DashPass (complimentary 12 months if activated by 2027-12-31).",
+          "category_hint": "online_groceries"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "anniversary-free-night-category-1-4",
+          "name": "Anniversary free night (Category 1-4)",
+          "trigger": "card anniversary",
+          "notes": "One night in a standard room at any Category 1-4 Hyatt hotel/resort every year after the cardmember anniversary; primary cardmember only; valid 12 months; issued up to 10 weeks after anniversary; not valid for packages, Miraval, Hyatt Zilara/Ziva. Hyatt's 2026 category changes (effective 2026-05-20) moved some hotels to Category 5, making them ineligible."
+        },
+        {
+          "key": "spend-based-free-night-category-1-4",
+          "name": "Spend-based free night (Category 1-4)",
+          "trigger": "spend $15,000 in a calendar year",
+          "notes": "One extra night per calendar year; same restrictions; issued up to 8 weeks after qualifying."
+        }
+      ],
+      "other_benefits": [
+        "World of Hyatt Discoverist status while the account is open",
+        "5 Tier-Qualifying Night credits each calendar year plus 2 per $5,000 spent",
+        "No foreign transaction fees"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://frequentmiler.com/world-of-hyatt-announces-2026-category-changes-theyre-not-pretty/",
+          "kind": "guide",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "The 2x 'bonus points' rates are as worded by Chase ('Bonus Points per $1'); base-point earn from World of Hyatt membership is not added outside Hyatt stays."
+      ],
+      "watch": {
+        "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+        "phrase": "Category 1",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works, but page size is unstable: 1,683,044 bytes on two earlier requests vs 186,837 on the final one (embedded variant data), so raw byte length is useless here. Compare a hash of extracted text near the earn/free-night section."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/chase-world-of-hyatt/",
+        "phrase": "World of Hyatt"
+      }
+    },
+    {
+      "id": "citi-aadvantage-platinum-select",
+      "name": "Citi / AAdvantage Platinum Select World Elite Mastercard",
+      "issuer": "Citi",
+      "network": "mastercard",
+      "annual_fee": 99,
+      "currency": "aadvantage",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:american_airlines@direct",
+          "category": "brand:american_airlines",
+          "label": "2 AAdvantage miles per $1 on eligible American Airlines purchases",
+          "rate": 2,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "No limit on miles earned. 1 Loyalty Point per eligible mile earned from purchases.",
+          "confidence": "issuer_verified",
+          "via": "purchased from American Airlines"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "2x at restaurants (incl. takeout)",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "2x at gas stations",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Citi lists gas stations only; EV charging is not mentioned.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "turo-statement-credit",
+          "name": "Turo statement credit",
+          "benefit_type": "turo",
+          "stack": "unknown",
+          "amount": 180,
+          "period": "year",
+          "resets": null,
+          "enrollment_required": true,
+          "valid_from": "2025-10-19",
+          "valid_to": "2026-10-18",
+          "notes": "LIMITED: up to $30 per completed Turo trip, max 6 trips ($180), for trips completed 2025-10-19 through 2026-10-18 only (ends in 7 days; no extension found). Card must be linked to the Turo account at turo.com/aadvantageplatinum and used to pay. Terms from third-party sources; Citi's page shows the benefit but not the amounts.",
+          "category_hint": "car_rental"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "125-american-airlines-flight-discount",
+          "name": "$125 American Airlines flight discount",
+          "trigger": "spend $20,000 or more in a cardmembership year and renew the card",
+          "notes": "Per Citi's benefits page (dated 2026-03-05)."
+        }
+      ],
+      "other_benefits": [
+        "First checked bag free on American Airlines domestic itineraries for you and up to 4 companions on the same reservation",
+        "Preferred boarding for you and up to 4 companions",
+        "25% savings on American Airlines inflight food and beverage purchases",
+        "$99 annual fee is waived for the first year",
+        "No foreign transaction fees"
+      ],
+      "confidence": "guide_verified",
+      "sources": [
+        {
+          "url": "https://www.citi.com/credit-cards/credit-card-miles/aadvantage-platinum-select-benefits",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.citi.com/credit-cards/citi-aadvantage-platinum-select-world-elite-mastercard",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://upgradedpoints.com/news/aadvantage-platinum-select-world-elite-card-turo-credit/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Turo credit amounts and the 2026-10-18 end date are from Upgraded Points / Frequent Miler (article last updated 2025-10-21); Citi's page only says 'Earn a statement credit on Turo Car Rentals'. Treat as expiring unless Citi extends it.",
+        "Admirals Club access is not a benefit of this card."
+      ],
+      "watch": {
+        "url": "https://www.citi.com/credit-cards/credit-card-miles/aadvantage-platinum-select-benefits",
+        "phrase": "$99",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works; this small page (26 KB) contains the $99 fee, $125 discount and earn rates as static text and returned identical byte length on repeat requests. The main product page (https://www.citi.com/credit-cards/citi-aadvantage-platinum-select-world-elite-mastercard, 629 KB) renders fee and APR as blanks in raw HTML, so it is a poor watch target."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/citi-aadvantage-platinum-select/",
+        "phrase": "AAdvantage Platinum"
+      }
+    },
+    {
+      "id": "citi-costco-anywhere-visa",
+      "name": "Costco Anywhere Visa Card by Citi",
+      "issuer": "Citi",
+      "network": "visa",
+      "annual_fee": 0,
+      "currency": "cash",
+      "base_rate": {
+        "rate": 1,
+        "unit": "%"
+      },
+      "earn": [
+        {
+          "key": "brand:costco_gas",
+          "category": "brand:costco_gas",
+          "label": "5% on gas purchased at Costco warehouse locations worldwide",
+          "rate": 5,
+          "unit": "%",
+          "channel": "any",
+          "cap": {
+            "amount": 7000,
+            "period": "year",
+            "after_cap_rate": 1,
+            "group": "gas_ev"
+          },
+          "valid_from": "2025-01-19",
+          "valid_to": null,
+          "notes": "Shares the $7,000 per year combined cap with the 4% gas/EV rate; 1% after the cap. 5% was 4% before 2025-01-19.",
+          "confidence": "issuer_verified",
+          "via": "Costco warehouse gas stations"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "4% on other eligible gas worldwide",
+          "rate": 4,
+          "unit": "%",
+          "channel": "any",
+          "cap": {
+            "amount": 7000,
+            "period": "year",
+            "after_cap_rate": 1,
+            "group": "gas_ev"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "First $7,000 per year in combined Costco and other eligible gas / EV charging purchases; 1% afterwards.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "ev_charging",
+          "category": "ev_charging",
+          "label": "4% on eligible EV charging worldwide",
+          "rate": 4,
+          "unit": "%",
+          "channel": "any",
+          "cap": {
+            "amount": 7000,
+            "period": "year",
+            "after_cap_rate": 1,
+            "group": "gas_ev"
+          },
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Same combined $7,000 cap.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3% on restaurants (incl. cafes, bars, lounges, fast food)",
+          "rate": 3,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "1% at certain bakeries and department-store restaurants.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "3% on eligible travel worldwide (airfare, hotels, car rentals, travel agencies, cruise lines, Costco Travel)",
+          "rate": 3,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "1% at timeshares, campgrounds, bed & breakfasts, grocery/warehouse clubs, and train and commuter travel.",
+          "confidence": "issuer_verified",
+          "covers": [
+            "airfare",
+            "hotels",
+            "car_rental"
+          ]
+        },
+        {
+          "key": "brand:costco",
+          "category": "brand:costco",
+          "label": "2% on all other purchases from Costco and Costco.com",
+          "rate": 2,
+          "unit": "%",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "Costco warehouses and Costco.com"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [
+        "Cash back is paid once a year as a reward certificate after the February billing statement closes; redeemable for cash or merchandise at U.S. Costco warehouses (incl. Puerto Rico) in a single transaction through December 31 of that year",
+        "No annual fee with an active paid Costco membership; no fee for authorized users",
+        "No foreign transaction fees"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.citi.com/credit-cards/costco-anywhere-visa-card",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Citi says '$7,000 per year' for the combined gas/EV cap without defining the year (calendar vs reward/cardmember year); modeled as 'year'."
+      ],
+      "watch": {
+        "url": "https://www.citi.com/credit-cards/costco-anywhere-visa-card",
+        "phrase": "5%",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works; page text includes the FAQ with the full category list and the $7,000 cap. Byte length was identical (564,377) across three requests, so raw length is a usable change signal here. The older FAQ URL .../money-management/costco-anywhere-visa-card-faqs now redirects to this page."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/citi-costco/",
+        "phrase": "Citi Costco"
+      }
+    },
+    {
+      "id": "discover-it-cash-back",
+      "name": "Discover it Cash Back",
+      "issuer": "Discover",
+      "network": "discover",
+      "annual_fee": 0,
+      "currency": "cash",
+      "base_rate": {
+        "rate": 1,
+        "unit": "%"
+      },
+      "earn": [],
+      "rotating": [
+        {
+          "key": "2026Q4",
+          "quarter": "2026Q4",
+          "categories": [
+            "dining",
+            "entertainment",
+            "utilities"
+          ],
+          "labels": [
+            "Restaurants",
+            "Entertainment",
+            "Utilities"
+          ],
+          "rate": 5,
+          "unit": "%",
+          "cap": {
+            "amount": 1500,
+            "period": "quarter",
+            "after_cap_rate": null
+          },
+          "activation_required": true,
+          "confidence": "guide_verified",
+          "notes": "5% on up to $1,500 combined purchases per quarter (max $75 cash back). Activation required; 5% starts on the later of 10/1/2026 or the activation date, not retroactive. U.S. merchants only. Restaurants: full-service, cafes, cafeterias, fast food, caterers (restaurants inside hotels/retail stores and bakeries may not qualify). Entertainment: movie theater tickets, live-event promoters, amusement parks, attractions, zoos, aquariums, bowling etc. (golf, country clubs, some college sports, charity events, streaming/cable subscriptions excluded). Utilities: residential electricity, natural gas, water, plus internet/cable/satellite/phone service bought online or by phone (in-store payment for telecom, bills routed via landlord/HOA, home fuel delivery, standalone streaming may not qualify). Discover does not assign MCCs, so a merchant that looks eligible may not earn 5%. Category definitions are from third-party summaries of Discover's terms (Discover's own calendar page did not render categories)."
+        }
+      ],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [
+        "Unlimited Cashback Match of all cash back earned in the first year (new cardmembers)"
+      ],
+      "confidence": "guide_verified",
+      "sources": [
+        {
+          "url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.discover.com/credit-cards/cash-back/cashback-calendar.html",
+          "kind": "issuer",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.doctorofcredit.com/tag/quarterly-categories/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://thepointsparty.com/articles/discover-5-percent-cashback-categories-q4-2026",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://dannydealguru.com/discover-5-bonus-categories-for-q4-2026/",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.nerdwallet.com/credit-cards/news/discover-bonus-categories-q4-2026",
+          "kind": "third_party",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "2027Q1 categories are not announced as of 2026-10-11 (no Doctor of Credit post; last year Q1 was announced 2025-11-30). Re-check from about 2026-11-30.",
+        "Q4 2026 categories, cap and definitions come from third-party summaries (Doctor of Credit, NerdWallet via search, The Points Party, Danny Deal Guru) that agree with each other; Discover's own rewards calendar page returned 'calendar is not working' and its card page lists no categories.",
+        "'utilities' is not in the category vocabulary; added as a new plain category. Discover's utilities definition also covers online/phone-purchased internet, cable, satellite and phone service.",
+        "Discover Bank merged into Capital One, N.A.: unknown whether the user's account has been migrated to the Capital One app/terms."
+      ],
+      "watch": {
+        "url": "https://www.discover.com/credit-cards/cash-back/cashback-calendar.html",
+        "phrase": "5%",
+        "kind": "issuer",
+        "renders_without_js": false,
+        "notes": "Plain GET works (200) but the quarterly categories are NOT in the raw HTML (JS-rendered; text has no 'Entertainment', 'Utilities' or '2027'), so this URL only detects page-template changes, not a new quarter. Discover's it-card.html is also 200 (748 KB) but contains only generic '5% ... each quarter' text. Secondary sources: NerdWallet returns 403 (Cloudflare 'Just a moment'); doctorofcredit.com fails local TLS verification (expired cert) from Python urllib. WebFetch tool could read Doctor of Credit tag page (https://www.doctorofcredit.com/tag/quarterly-categories/), where Discover announces each quarter ~1 month ahead (Q4 2026 post dated 2026-09-01; Q1 2026 post dated 2025-11-30)."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/discover-it/",
+        "phrase": "Discover it"
+      }
+    },
+    {
+      "id": "hilton-aspire-amex",
+      "name": "Hilton Honors American Express Aspire Card",
+      "issuer": "American Express",
+      "network": "amex",
+      "annual_fee": 550,
+      "currency": "hilton",
+      "base_rate": {
+        "rate": 3,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:hilton@direct",
+          "category": "brand:hilton",
+          "label": "14X on purchases made directly with hotels and resorts in the Hilton portfolio",
+          "rate": 14,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "directly with Hilton portfolio hotels and resorts"
+        },
+        {
+          "key": "airfare@direct",
+          "category": "airfare",
+          "label": "7X on flights booked directly with airlines or through Amex Travel",
+          "rate": 7,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the airline or Amex Travel"
+        },
+        {
+          "key": "airfare@issuer_portal",
+          "category": "airfare",
+          "label": "7X on flights booked directly with airlines or through Amex Travel",
+          "rate": 7,
+          "unit": "x",
+          "channel": "issuer_portal",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "booked directly with the airline or Amex Travel"
+        },
+        {
+          "key": "car_rental@direct",
+          "category": "car_rental",
+          "label": "7X on car rentals purchased directly from select car rental companies",
+          "rate": 7,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "directly with select car rental companies"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "7X at U.S. restaurants (including takeout and delivery)",
+          "rate": 7,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [
+        {
+          "key": "hilton-resort-credit",
+          "name": "Hilton Resort Credit",
+          "benefit_type": "hilton_resort",
+          "stack": "per_card",
+          "amount": 200,
+          "period": "half_year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $200 semi-annually ($400/yr) on eligible purchases made directly with participating Hilton Resorts. Half-year boundaries not stated on the issuer page (calendar halves assumed). Enrollment not stated.",
+          "category_hint": "brand:hilton"
+        },
+        {
+          "key": "flight-credit",
+          "name": "Flight Credit",
+          "benefit_type": "aspire_flight",
+          "stack": "per_card",
+          "amount": 50,
+          "period": "quarter",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $50 each quarter ($200/yr) on flights bought directly with an airline, through AmexTravel.com, or the Amex Travel App. Calendar quarters assumed.",
+          "category_hint": "airfare"
+        },
+        {
+          "key": "clear-credit",
+          "name": "CLEAR+ Credit",
+          "benefit_type": "clear",
+          "stack": "once",
+          "amount": 219,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $219 per calendar year after paying for CLEAR+ with the Card; excludes taxes and fees; subject to auto-renewal.",
+          "category_hint": "travel_general"
+        },
+        {
+          "key": "waldorf-astoria-conrad-property-credit",
+          "name": "Waldorf Astoria / Conrad Property Credit",
+          "benefit_type": "hilton_waldorf_conrad",
+          "stack": "per_card",
+          "amount": 100,
+          "period": "per_stay",
+          "resets": null,
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Up to $100 credit for qualifying charges at Waldorf Astoria and Conrad properties per eligible stay: book a 2-night minimum at HiltonHonorsAspireCard.com with the Aspire Card Benefit rate (or call 855-292-5757). Per stay, not a fixed period; no annual limit stated.",
+          "category_hint": "brand:hilton"
+        }
+      ],
+      "certificates": [
+        {
+          "key": "annual-free-night-reward",
+          "name": "Annual Free Night Reward",
+          "trigger": "card anniversary (first year of Card Membership and every year upon Card renewal)",
+          "notes": "No blackout dates per issuer tooltip."
+        },
+        {
+          "key": "free-night-reward-spend-tier-1",
+          "name": "Free Night Reward (spend tier 1)",
+          "trigger": "spend $30,000 on purchases in a calendar year",
+          "notes": ""
+        },
+        {
+          "key": "free-night-reward-spend-tier-2",
+          "name": "Free Night Reward (spend tier 2)",
+          "trigger": "spend an additional $30,000 (total $60,000) in the same calendar year",
+          "notes": ""
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Earn block, 25-benefit list and FAQ read from raw HTML."
+        }
+      ],
+      "open_questions": [
+        "Issuer page does not state half-year/quarter boundaries for the resort and flight credits; calendar assumed.",
+        "Enrollment is not stated for the resort, flight or CLEAR+ credits on the issuer page (null). National Car Rental Emerald Club Executive status requires enrollment via the Amex account (perk, not a credit).",
+        "Diamond status is complimentary (perk)."
+      ],
+      "watch": {
+        "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+        "phrase": "annual fee for the Hilton Honors American Express Aspire Card is $550",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain urllib GET works (no bot block) and returns the full server-rendered page with card data embedded in the HTML. Amex returns HTTP 200 with a 'Page Not Found' body for wrong card slugs (soft 404), so test the phrase, not the status. Page is multi-MB and includes catalog data for other cards, so hash only text near the phrase. The alias /hilton-honors-aspire-card/ also serves the same real page (200, 3,746,500 bytes); /hilton-honors-aspire/ is the canonical slug."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/amex-hilton-aspire/",
+        "phrase": "Hilton Aspire"
+      }
+    },
+    {
+      "id": "hilton-honors-amex",
+      "name": "Hilton Honors American Express Card",
+      "issuer": "American Express",
+      "network": "amex",
+      "annual_fee": 0,
+      "currency": "hilton",
+      "base_rate": {
+        "rate": 3,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:hilton@direct",
+          "category": "brand:hilton",
+          "label": "7X on purchases made directly with hotels and resorts in the Hilton portfolio",
+          "rate": 7,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified",
+          "via": "directly with Hilton portfolio hotels and resorts"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "5X at U.S. restaurants (including takeout and delivery)",
+          "rate": 5,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "groceries",
+          "category": "groceries",
+          "label": "5X at U.S. supermarkets",
+          "rate": 5,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "5X at U.S. gas stations",
+          "rate": 5,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [
+        {
+          "key": "hilton-honors-gold-status-upgrade",
+          "name": "Hilton Honors Gold status upgrade",
+          "trigger": "spend $20,000 on eligible purchases in a calendar year",
+          "notes": "Status, not a certificate: Silver is complimentary; $20,000 calendar-year spend upgrades to Gold through the end of the next calendar year."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Earn block and FAQ read from raw HTML. FAQ: the card 'does not currently have a Free Night Reward benefit'."
+        }
+      ],
+      "open_questions": [
+        "No spending caps appear on the issuer page for any category.",
+        "No Free Night Reward on this card outside welcome offers (issuer FAQ)."
+      ],
+      "watch": {
+        "url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
+        "phrase": "There is no annual fee for the Hilton Honors American Express Card",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain urllib GET works (no bot block) and returns the full server-rendered page with card data embedded in the HTML. Amex returns HTTP 200 with a 'Page Not Found' body for wrong card slugs (soft 404), so test the phrase, not the status. Page is multi-MB and includes catalog data for other cards, so hash only text near the phrase. The slug /hilton-honors-american-express-card/ is a soft 404 (200, 'Page Not Found'); the working slug is /hilton-honors/."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/amex-hilton/",
+        "phrase": "AmEx Hilton"
+      }
+    },
+    {
+      "id": "qatar-privilege-infinite",
+      "name": "Qatar Airways Privilege Club Visa Infinite (Cardless) - premium $499 tier",
+      "issuer": "Cardless Inc. (program manager); issuing bank not confirmed",
+      "network": "visa",
+      "annual_fee": 499,
+      "currency": "avios",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:qatar@direct",
+          "category": "brand:qatar",
+          "label": "5x Avios on Qatar Airways purchases",
+          "rate": 5,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Issuer meta description says 'Earn up to 5x Avios'; the per-category split is third-party.",
+          "confidence": "guide_verified",
+          "via": "Qatar Airways purchases"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3x Avios on dining",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Upgraded Points and Doctor of Credit's table say 3x; a different line in the DoC update implies a 4x base (promo to 6x through Feb 4, 2026). 3x used.",
+          "confidence": "third_party_only"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [
+        {
+          "key": "privilege-club-gold-status-oneworld-sapphire",
+          "name": "Privilege Club Gold status (oneworld Sapphire)",
+          "trigger": "first year of Card Membership",
+          "notes": "75% tier bonus on eligible flights, priority stand-by, check-in and boarding, preferred seats, extra baggage, lounge access, Al Maha meet-and-assist, discount on online redemptions."
+        },
+        {
+          "key": "40-qcredits",
+          "name": "40 Qcredits",
+          "trigger": "first year of Card Membership (listed under first-year Gold benefits)",
+          "notes": "To redeem for upgrades, excess baggage and more. Whether Qcredits renew annually is not stated."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "third_party_only",
+      "sources": [
+        {
+          "url": "https://www.cardless.com/qatar-airways",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Redirects to /cards/qatar/compare. Fees, Qpoints ratios, first-year status, Qcredits read. Per-category multipliers not in the page text. Page footer ('Issued by First Electronic Bank, Member FDIC', 2024) looks stale."
+        },
+        {
+          "url": "https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Title: Visa Signature Rates and Fees Disclosure (Rev. 03-09-26). Binary PDF; text not extractable with available tools."
+        },
+        {
+          "url": "https://legal.cardless.com/offer_terms/qatar_infinite/qatar_infinite_offer_terms.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Title: Standard Offer Terms, Visa Infinite, dated 08.05.2026. Binary PDF; text not extractable."
+        },
+        {
+          "url": "https://www.doctorofcredit.com/cardless-qatar-cards-up-to-100000-miles-bonus",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Earn table (Signature 4x/2x/1x, Infinite 5x/3x/1x); update dated Dec 8, 2025."
+        },
+        {
+          "url": "https://upgradedpoints.com/news/qatar-airways-cardless-credit-cards-welcome-offer/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Same earn table; last updated Feb 5, 2026; promotional offers ended Feb 4, 2026."
+        }
+      ],
+      "open_questions": [
+        "Dining multiplier conflict inside Doctor of Credit's Dec 2025 update (3x in the table, 'from 4x to 6x' in the promo note); Upgraded Points says 3x.",
+        "Qpoints: 2 Qpoints per 1,500 Avios earned on the card (issuer page).",
+        "Whether the 40 Qcredits recur yearly is not stated."
+      ],
+      "watch": {
+        "url": "https://www.cardless.com/qatar-airways",
+        "phrase": "$499 annual fee",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (200; redirects to https://www.cardless.com/cards/qatar/compare, a Framer-built page). Fees, welcome offers and Qpoints ratios are in the HTML; per-category Avios multipliers are NOT (only meta description 'Earn up to 5x Avios'), so earn-rate changes cannot be detected from this page. Companion PDFs fetch fine: https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf (200, 110,510 bytes) and .../premium-499-qatar/rates_and_fees.pdf (200, 107,770 bytes); byte length is usable as a change signal."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/cardless-qatar-airways-infinite/",
+        "phrase": "Qatar Airways Infinite"
+      }
+    },
+    {
+      "id": "qatar-privilege-signature",
+      "name": "Qatar Airways Privilege Club Visa Signature (Cardless) - standard $99 tier",
+      "issuer": "Cardless Inc. (program manager); issuing bank not confirmed",
+      "network": "visa",
+      "annual_fee": 99,
+      "currency": "avios",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "brand:qatar@direct",
+          "category": "brand:qatar",
+          "label": "4x Avios on Qatar Airways purchases",
+          "rate": 4,
+          "unit": "x",
+          "channel": "direct",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Third-party (Doctor of Credit, Upgraded Points); the issuer page lists the category but not the multiplier.",
+          "confidence": "guide_verified",
+          "via": "Qatar Airways purchases"
+        },
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "2x Avios on dining",
+          "rate": 2,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Third-party. A temporary promo raising Signature dining to 4x ran through Feb 4, 2026 and has ended.",
+          "confidence": "guide_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [
+        {
+          "key": "privilege-club-silver-status-oneworld-ruby",
+          "name": "Privilege Club Silver status (oneworld Ruby)",
+          "trigger": "first year of Card Membership",
+          "notes": "25% tier bonus on eligible flights, priority stand-by, priority check-in and boarding, 20% off seat selection, extra baggage, lounge access (issuer page)."
+        }
+      ],
+      "other_benefits": [],
+      "confidence": "guide_verified",
+      "sources": [
+        {
+          "url": "https://www.cardless.com/qatar-airways",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Redirects to /cards/qatar/compare. Fees, Qpoints ratios, first-year status, Qcredits read. Per-category multipliers not in the page text. Page footer ('Issued by First Electronic Bank, Member FDIC', 2024) looks stale."
+        },
+        {
+          "url": "https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Title: Visa Signature Rates and Fees Disclosure (Rev. 03-09-26). Binary PDF; text not extractable with available tools."
+        },
+        {
+          "url": "https://legal.cardless.com/offer_terms/qatar_infinite/qatar_infinite_offer_terms.pdf",
+          "kind": "issuer_pdf",
+          "read_ok": false,
+          "fetched": "2026-10-11",
+          "note": "Title: Standard Offer Terms, Visa Infinite, dated 08.05.2026. Binary PDF; text not extractable."
+        },
+        {
+          "url": "https://www.doctorofcredit.com/cardless-qatar-cards-up-to-100000-miles-bonus",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Earn table (Signature 4x/2x/1x, Infinite 5x/3x/1x); update dated Dec 8, 2025."
+        },
+        {
+          "url": "https://upgradedpoints.com/news/qatar-airways-cardless-credit-cards-welcome-offer/",
+          "kind": "guide",
+          "read_ok": true,
+          "fetched": "2026-10-11",
+          "note": "Same earn table; last updated Feb 5, 2026; promotional offers ended Feb 4, 2026."
+        }
+      ],
+      "open_questions": [
+        "Per-category Avios multipliers come from third-party sources only (two agree); the issuer page shows only 'Earn up to 5x Avios' in its meta description.",
+        "Issuing bank is not confirmed: the Cardless page footer says First Electronic Bank (dated 2024); Bilt's cards on the same platform are issued by Column N.A.",
+        "Qpoints: 2 Qpoints per 2,000 Avios earned on the card (issuer page).",
+        "Doctor of Credit says both cards earn reward fee waivers through spending ($15,000 / $25,000); the exact thresholds per card were not confirmed.",
+        "The Signature ($99) is treated as the standard tier; the Infinite ($499) is the premium tier. The user's tier is not known."
+      ],
+      "watch": {
+        "url": "https://www.cardless.com/qatar-airways",
+        "phrase": "$499 annual fee",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (200; redirects to https://www.cardless.com/cards/qatar/compare, a Framer-built page). Fees, welcome offers and Qpoints ratios are in the HTML; per-category Avios multipliers are NOT (only meta description 'Earn up to 5x Avios'), so earn-rate changes cannot be detected from this page. Companion PDFs fetch fine: https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf (200, 110,510 bytes) and .../premium-499-qatar/rates_and_fees.pdf (200, 107,770 bytes); byte length is usable as a change signal."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/cardless-qatar-airways-signature/",
+        "phrase": "Qatar Airways Signature"
+      }
+    },
+    {
+      "id": "wells-fargo-autograph",
+      "name": "Wells Fargo Autograph Visa",
+      "issuer": "Wells Fargo",
+      "network": "visa",
+      "annual_fee": 0,
+      "currency": "wf_rewards",
+      "base_rate": {
+        "rate": 1,
+        "unit": "x"
+      },
+      "earn": [
+        {
+          "key": "dining",
+          "category": "dining",
+          "label": "3X on restaurants",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Eating places, restaurants, fast food, caterers and drinking places. Bakeries, grocery stores and third-party delivery services are excluded. No cap.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "travel_general",
+          "category": "travel_general",
+          "label": "3X on travel",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Airlines, hotels and motels, campgrounds, timeshares, cruise lines, travel agencies, discount travel sites and vehicle rentals. No cap.",
+          "confidence": "issuer_verified",
+          "covers": [
+            "airfare",
+            "hotels",
+            "car_rental"
+          ]
+        },
+        {
+          "key": "gas",
+          "category": "gas",
+          "label": "3X on gas stations",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Gas stations and automated fuel dispensers. Auto repair, car washes, superstores, warehouse clubs and grocery stores excluded.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "ev_charging",
+          "category": "ev_charging",
+          "label": "3X on EV charging stations",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Part of Wells Fargo's 'Gas (Fuel/Charging)' category.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "transit",
+          "category": "transit",
+          "label": "3X on transit",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Ferries, parking lots and garages, limousines, taxis, passenger railways, toll bridges and highways. Rideshare apps are not named; whether they code as taxi/limousine is unconfirmed.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "streaming",
+          "category": "streaming",
+          "label": "3X on popular streaming services",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Services considered cable or pay television; bundled or third-party-billed streaming may not qualify. Eligible list at wellsfargo.com/autographstreaming.",
+          "confidence": "issuer_verified"
+        },
+        {
+          "key": "phone_plans",
+          "category": "phone_plans",
+          "label": "3X on phone plans",
+          "rate": 3,
+          "unit": "x",
+          "channel": "any",
+          "cap": null,
+          "valid_from": null,
+          "valid_to": null,
+          "notes": "Landline and cell phone providers; add-on services, phones and accessories, and bundled/third-party-billed plans may not qualify.",
+          "confidence": "issuer_verified"
+        }
+      ],
+      "rotating": [],
+      "credits": [],
+      "certificates": [],
+      "other_benefits": [
+        "Cell phone protection up to $600 against damage or theft, $25 deductible, two paid claims per 12 months; phone bill must be paid with the card",
+        "No foreign transaction fee; points do not expire while the account is open",
+        "Product-change history: the Wells Fargo Bilt Mastercard stopped taking new applicants 2025-11-05 and existing accounts converted to the Autograph Visa (new card number) on 2026-02-07; Bilt Rewards and rent earning no longer apply to this card; points do not carry a welcome bonus on conversion"
+      ],
+      "confidence": "issuer_verified",
+      "sources": [
+        {
+          "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://www.wellsfargo.com/credit-cards/autograph-visa/terms/?lang=en",
+          "kind": "issuer",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://sites.wf.com/bilt-conversion-faq/",
+          "kind": "issuer",
+          "read_ok": false,
+          "fetched": "2026-10-11"
+        },
+        {
+          "url": "https://onemileatatime.com/news/bilt-cardless-credit-cards/",
+          "kind": "third_party",
+          "read_ok": true,
+          "fetched": "2026-10-11"
+        }
+      ],
+      "open_questions": [
+        "Wells Fargo's Bilt-conversion FAQ page only returned a redirect notice; the conversion date (2026-02-07) and 'Autograph Visa with a new card number' come from third-party coverage and the search-result snippet of that FAQ. Earn terms assume the converted card has the standard Autograph terms (Autograph terms effective 2025-12-30).",
+        "Rideshare (Uber/Lyft) is not named in Wells Fargo's transit definition; not recorded as earning 3X.",
+        "Point value: Wells Fargo shows 20,000 points = $200 cash, i.e. 1 cent each for cash; transfer-partner value is 1 point = 1 partner mile/point."
+      ],
+      "watch": {
+        "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card/",
+        "phrase": "3X",
+        "kind": "issuer",
+        "renders_without_js": true,
+        "notes": "Plain GET works (redirects to the same URL with ?sub_channel=WEB&vendor_code=WF). Byte length varied 141,317 vs 141,437 between requests. The terms summary https://www.wellsfargo.com/credit-cards/autograph-visa/terms/ also works (redirects to .../documents/autograph-visa-terms/, 81,568 bytes, identical on repeat) and is the more stable target for category definitions."
+      },
+      "watch_guide": {
+        "url": "https://www.uscreditcardguide.com/wells-fargo-autograph/",
+        "phrase": "Wells Fargo Autograph"
+      }
+    }
+  ]
+}
