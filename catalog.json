@@ -2824,7 +2824,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "Raised from $50 to $100 on 2026-06-15. Automatic when the card is used for hotel accommodation purchased through Chase Travel; single credit per account-anniversary year; first $100 of such purchases earns no points; may be reversed on returns/cancellations.",
-          "category_hint": "hotels"
+          "category_hint": "hotels",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bchase\\s+travel\\s+hotel\\b|\\bhotel\\s+credit\\b"
+            }
+          ]
         },
         {
           "key": "global-entry-tsa-precheck-nexus-fee-credit",
@@ -2837,7 +2843,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "New with the 2026-06-15 refresh. One credit every four years; must be paid directly to DHS/TSA-authorized providers.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bglobal\\s+entry\\b|\\bpre\\s*check|\\bnexus\\b"
+            }
+          ]
         },
         {
           "key": "doordash-non-restaurant-promo",
@@ -3016,7 +3028,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "Automatic statement credit on any purchase in the travel category (gift cards and points/miles purchases excluded). Annual period starts at account open date and runs through the first statement after the anniversary. Purchases covered earn no points.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\btravel\\s+credit\\b"
+            }
+          ]
         },
         {
           "key": "the-edit-hotel-credit",
@@ -3029,7 +3047,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "Up to $250 per prepaid 'Pay Now' stay of 2+ nights booked through Chase Travel at The Edit properties, max $500 per calendar year; applies from 1/1/2026.",
-          "category_hint": "hotels"
+          "category_hint": "hotels",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bthe\\s+edit\\b"
+            }
+          ]
         },
         {
           "key": "dining-credit-sapphire-reserve-exclusive-tables",
@@ -3042,7 +3066,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "$150 Jan-Jun and $150 Jul-Dec ($300 per calendar year) at participating Exclusive Tables restaurants via OpenTable; Chase must identify the purchase as made directly with the restaurant; third-party delivery and gift cards do not qualify. OpenTable eligibility check applies; benefit term through 2030-06-30.",
-          "category_hint": "dining"
+          "category_hint": "dining",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bdining\\b"
+            }
+          ]
         },
         {
           "key": "stubhub-viagogo-credit",
@@ -3055,7 +3085,13 @@
           "enrollment_required": true,
           "valid_to": "2027-12-31",
           "notes": "$150 Jan-Jun and $150 Jul-Dec ($300 per calendar year) through 2027-12-31. One-time activation on chase.com or the Chase app. Gift cards and UK-event purchases via StubHub International excluded.",
-          "category_hint": "entertainment"
+          "category_hint": "entertainment",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bstubhub\\b|\\bviagogo\\b"
+            }
+          ]
         },
         {
           "key": "lyft-credit",
@@ -3068,7 +3104,13 @@
           "enrollment_required": true,
           "valid_to": "2027-09-30",
           "notes": "$10 per calendar month in-app, through 2027-09-30; card must be the payment method in the Lyft app; unused value is forfeited monthly.",
-          "category_hint": "rideshare"
+          "category_hint": "rideshare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\blyft\\b"
+            }
+          ]
         },
         {
           "key": "peloton-membership-credit",
@@ -3081,7 +3123,13 @@
           "enrollment_required": true,
           "valid_to": "2027-12-31",
           "notes": "Up to $10 per month ($120 per calendar year) on eligible Peloton memberships through 2027-12-31. One-time activation on chase.com/app plus a sign-up via the Chase Peloton promotion page.",
-          "category_hint": "fitness"
+          "category_hint": "fitness",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bpeloton\\b"
+            }
+          ]
         },
         {
           "key": "global-entry-tsa-precheck-nexus-fee-credit",
@@ -3094,7 +3142,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "One credit every four years after the application fee is charged to the card; must be paid directly with the government program/eligible partner, not via third parties.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bglobal\\s+entry\\b|\\bpre\\s*check|\\bnexus\\b"
+            }
+          ]
         },
         {
           "key": "doordash-restaurant-promo",
@@ -3121,6 +3175,26 @@
           "valid_to": "2029-12-31",
           "notes": "Two $10 monthly promos on non-restaurant orders (groceries, retail), each on a separate order; checkout promo, not a statement credit; through 2029-12-31.",
           "category_hint": "online_groceries"
+        },
+        {
+          "key": "chase-travel-select-hotels-credit",
+          "name": "Chase Travel select hotels credit",
+          "benefit_type": "chase_travel_hotel",
+          "stack": "per_card",
+          "amount": 250,
+          "period": "year",
+          "resets": "cardmember_year",
+          "enrollment_required": null,
+          "valid_to": null,
+          "notes": "Seen in the Chase benefits hub on 2026-10-12 as '$250 Credit for select Chase Travel hotels'. Not on the public Reserve page (fetched 2026-10-12) nor on 美卡指南 (updated 2026-10-09); terms unverified.",
+          "category_hint": "hotels",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bchase\\s+travel\\s+hotels?\\b"
+            }
+          ],
+          "confidence": "user_reported"
         }
       ],
       "certificates": [],
@@ -3150,7 +3224,8 @@
       "open_questions": [
         "'promo_period' used as a cap period for the Peloton $5,000 total-spend cap (not in the stated period enum).",
         "Credits with period 'four_years' have resets=null (neither calendar nor cardmember year).",
-        "Assumes the user's card is the post-June-2025 refreshed Reserve ($795), not a legacy $550 card; the page does not describe legacy terms."
+        "Assumes the user's card is the post-June-2025 refreshed Reserve ($795), not a legacy $550 card; the page does not describe legacy terms.",
+        "$250 select Chase Travel hotels credit is user_reported from the benefits hub; period and property list unverified"
       ],
       "watch": {
         "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",

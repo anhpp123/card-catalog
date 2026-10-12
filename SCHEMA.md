@@ -112,7 +112,10 @@
           "category_hint": "rideshare",    // 可为 null
           "issuer_tracker_match": [        // 可选：发卡行导出文件（data/issuer-export.schema.json）里哪些 tracker
             {"issuer": "amex", "pattern": "\\buber\\s*cash\\b"}   // 名对应这条福利。pattern 是不区分大小写的正则，
-          ]                                // 在 tracker 名里搜（不要求整串匹配）；同卡同一 tracker 名只许命中一条福利
+          ],                               // 在 tracker 名里搜（不要求整串匹配）；同卡同一 tracker 名只许命中一条福利
+          "confidence": "user_reported"    // 可选：只在这条福利比整卡更不确定时写（档位同 earn 行），由
+                                           // conversion_hints.json 的 credits.<key>.confidence 指定。user_reported 的
+                                           // 福利不单独决定导入时推出的周年月（见下文「发卡行数据」的周年月一条）
         }
       ],
       "certificates": [ {"key": "...", "name": "...", "trigger": "...", "notes": ""} ],
@@ -195,7 +198,12 @@
 
 - **绑定**：每个 `(issuer, suffix)` 绑到一张持有卡，存在该实例上（`bound_issuer`、`issuer_suffix`）。没绑的账户先过绑定步骤：按 `product` 和目录卡名给建议，默认「跳过」，从不自动绑。删卡或「解除绑定」后该尾号回到未绑定。
 - **福利用量**：`kind: credit` 的 tracker 按目录 `credits[].issuer_tracker_match` 找福利，恰好命中一条才写。写进 `credit_usage`，`source` 为 `issuer:<issuer>`，`synced_at` 为文件的 `exported_at`，`period_start` / `period_end` / `period_amount` 是 tracker 自己的周期和金额。发卡行的数优先：同期的手动记录保留，福利页显示「手动记录 $X（已被同步覆盖）」。tracker 周期和目录推算的不一致时信 tracker（覆盖今天的那一期按 tracker 的起止和金额算）并在导入结果里列出。没命中、命中多条、不是美元、没有 `spent` 的 tracker 都列在结果里，不静默丢。
-- **消费进度**（`kind: spend_progress`）存 Room 表 `spend_progress`，卡详情页显示进度条。**Offers** 存 `issuer_offer`，每个 `(issuer, suffix)` 整份替换，过期的不显示；查卡搜索词是某个商家名的子串（不分大小写）时排名上方显示「Offers」块。
+  - **按卡周年重置的福利**（`resets` 或 `period` 为 `cardmember_year`）：目录按月算周期，发卡行按开卡日算。tracker 周期长度等于目录周期长度（允许差一天：2 月 29 日的周年，Chase 脚本在平年改成 2 月 28 日，得到 2027-02-28 至 2028-02-28；以及结束在周年日当天的 2026-03-17 至 2027-03-17）、且开始月份等于目录那一期的开始月份（周年月未知时任何月份都算）时视为同一期，不列为不一致。
+  - **只给一端日期**：按目录周期长度补另一端，补出来的周期照 tracker 自己的周期对待，结果里写「Chase 没给结束日期，按目录周期补成 X 至 Y」；按卡周年重置的年度福利补出来的开始月份和已设的周年月不同时也列出（周年月不改）。两端都没给（或福利有 `windows`、没有固定长度）时按目录在 `exported_at` 那天的那一期记，同样列出。
+  - **周年月**：实例 `anniversary_month` 为空时，看这个账户里每一条按卡周年重置、周期为 12 个月（同上允许差一天）且日期来自 tracker 自己（两端都给，或给一端补全；按目录那一期记的不算）的 tracker：开始月份全部相同才用它填上，来源取第一条目录没标 `confidence: user_reported` 的福利（`setAnniversaryIfUnset`，只在为空时写，用户设过的不覆盖），导入结果「周年月」一节写明来源（「已按 Chase「Annual travel credit」的周期（2026-03-17 起）把周年月设为 3 月，可在卡详情改」）。月份不一致时不写，同一节列出每条 tracker 名和开始月份；只有 `user_reported` 的福利给了周期时也不写，同样说明。
+  - 导入结果「周期或金额：和目录不一致或按目录补全」一节列出以上各种情况。
+- **消费进度**（`kind: spend_progress`）存 Room 表 `spend_progress`，卡详情页显示进度条。**Offers** 存 `issuer_offer`，每个 `(issuer, suffix)` 整份替换，过期的不显示；查卡搜索词是某个商家名的子串（不分大小写）时排名上方显示「Offers」块，搜索词就是当前排序类别（或不匹配任何类别、按「其他消费」或之后点的类别排）时计入排序（品牌排序只计该品牌商家的 offer，其他排序只计搜索词在商家名词首出现的 offer）；「Offer」页按商家跨卡列出全部（`DESIGN.md`「Offers」）。
+- **发卡行抬头**：每个发卡行最新一份已应用文件（至少应用到一个账户）的 `exported_at`、`source`、`warnings`（最多 50 条）存在 DataStore 的 `issuer_snapshots_json`（`{"amex": {...}, "chase": {...}}`），只保留 `exported_at` 最新的那份；不进持有卡导出文件，下次导入发卡行文件就回来。
 - 同一文件再导一次不改任何东西；比该卡 `issuer_synced_at` 旧的文件对那张卡跳过。导入结果页顺序：脚本自己的 `warnings` 在最上，然后计数、未绑定账户、没对上的 tracker、周期或金额不一致。
 - **导出导入持有卡文件**：带绑定（实例上的三个字段）和发卡行写的 `credit_usage` 行（带 `source` 等四个字段）；**不带** offers 和消费进度——这两样是快照，下次导入发卡行文件就回来。
 - 数据库 v4：从 v3 迁移时给 `card_instance` 加 `bound_issuer`、`issuer_suffix`、`issuer_synced_at`，给 `credit_usage` 加 `source`、`synced_at`、`period_end`、`period_amount`（都可为空，旧行即未绑定、手动记录），新建 `issuer_offer`、`spend_progress` 两张表；原有数据不动。
