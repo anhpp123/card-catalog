@@ -657,7 +657,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $600/yr as $300 semi-annually. Prepaid bookings through Amex Travel only. The Hotel Collection requires a 2-night minimum. Issuer page does not state the half-year boundaries; Upgraded Points says Jan-Jun and Jul-Dec. Enrollment not mentioned on issuer page.",
-          "category_hint": "hotels"
+          "category_hint": "hotels",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bhotel\\s+credit\\b|\\bfine\\s+hotels\\b|\\bhotel\\s+collection\\b|\\bfhr\\b"
+            }
+          ]
         },
         {
           "key": "uber-cash",
@@ -673,7 +679,13 @@
             "12": 35
           },
           "notes": "$15 each month plus a $20 bonus in December ($35 in December, $200/yr). Basic Card Member only. Add the Platinum Card to the Uber account; an Amex Card must be selected as the payment method; US rides and Uber Eats. Does not roll over (Upgraded Points). 'Enrollment' here is linking the card in the Uber app, not Amex enrollment.",
-          "category_hint": "rideshare"
+          "category_hint": "rideshare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\buber\\s*cash\\b"
+            }
+          ]
         },
         {
           "key": "uber-one-credit",
@@ -686,7 +698,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $120 per calendar year after paying for an auto-renewing Uber One membership with the Card. Enrollment not stated on issuer page.",
-          "category_hint": "rideshare"
+          "category_hint": "rideshare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\buber\\s*one\\b"
+            }
+          ]
         },
         {
           "key": "airline-fee-credit",
@@ -699,7 +717,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $200 per calendar year for incidental fees (bags, in-flight refreshments, change fees, lounge day passes, etc.) charged by ONE selected qualifying airline; the airline must be selected in the Amex account. Not airfare.",
-          "category_hint": "airfare"
+          "category_hint": "airfare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bairline\\s+(?:fee|incidental)"
+            }
+          ]
         },
         {
           "key": "clear-credit",
@@ -712,7 +736,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $219 per calendar year for an auto-renewing CLEAR+ membership, excluding taxes and fees. Enrollment not stated on issuer page.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bclear\\b"
+            }
+          ]
         },
         {
           "key": "resy-credit",
@@ -725,7 +755,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $100 each quarter ($400/yr) at qualifying US Resy restaurants. Issuer page does not define quarter boundaries (calendar quarters assumed).",
-          "category_hint": "dining"
+          "category_hint": "dining",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bresy\\b"
+            }
+          ]
         },
         {
           "key": "digital-entertainment-credit",
@@ -738,7 +774,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $25 each month ($300/yr) at participating partners: Disney+ (and bundles), ESPN streaming, Hulu, The New York Times, Paramount+, Peacock, The Wall Street Journal, YouTube Premium, YouTube TV.",
-          "category_hint": "streaming"
+          "category_hint": "streaming",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bdigital\\s+entertainment\\b"
+            }
+          ]
         },
         {
           "key": "lululemon-credit",
@@ -751,7 +793,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $75 each quarter ($300/yr) at US lululemon retail stores (excluding outlets) and lululemon.com. Calendar quarters assumed.",
-          "category_hint": "brand:lululemon"
+          "category_hint": "brand:lululemon",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\blululemon\\b"
+            }
+          ]
         },
         {
           "key": "walmart-credit",
@@ -764,7 +812,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $12.95 per month plus applicable taxes ($155/yr) for ONE auto-renewing monthly Walmart+ membership paid with the Card. Issuer page does not mention enrollment.",
-          "category_hint": "brand:walmart"
+          "category_hint": "brand:walmart",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bwalmart\\b"
+            }
+          ]
         },
         {
           "key": "oura-ring-credit",
@@ -777,7 +831,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $200 per calendar year, only for purchasing an Oura Ring at ouraring.com.",
-          "category_hint": "brand:oura"
+          "category_hint": "brand:oura",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\boura\\b"
+            }
+          ]
         },
         {
           "key": "equinox-credit",
@@ -790,7 +850,13 @@
           "enrollment_required": true,
           "valid_to": null,
           "notes": "Up to $300 per calendar year for an Equinox club membership or Equinox+ digital subscription (auto-renewal).",
-          "category_hint": "fitness"
+          "category_hint": "fitness",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bequinox\\b"
+            }
+          ]
         },
         {
           "key": "fee-credit-for-global-entry-or-tsa-precheck",
@@ -803,7 +869,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Statement credit every 4 years after applying for Global Entry ($120), OR after applying for a 5-year TSA PreCheck membership (up to $85 through an official enrollment provider). Charge the fee to the Card.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bglobal\\s+entry\\b|\\bpre\\s*check\\b"
+            }
+          ]
         }
       ],
       "certificates": [],
@@ -3590,7 +3662,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $200 semi-annually ($400/yr) on eligible purchases made directly with participating Hilton Resorts. Half-year boundaries not stated on the issuer page (calendar halves assumed). Enrollment not stated.",
-          "category_hint": "brand:hilton"
+          "category_hint": "brand:hilton",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bresort\\b"
+            }
+          ]
         },
         {
           "key": "flight-credit",
@@ -3603,7 +3681,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $50 each quarter ($200/yr) on flights bought directly with an airline, through AmexTravel.com, or the Amex Travel App. Calendar quarters assumed.",
-          "category_hint": "airfare"
+          "category_hint": "airfare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bflight\\b"
+            }
+          ]
         },
         {
           "key": "clear-credit",
@@ -3616,7 +3700,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $219 per calendar year after paying for CLEAR+ with the Card; excludes taxes and fees; subject to auto-renewal.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bclear\\b"
+            }
+          ]
         },
         {
           "key": "waldorf-astoria-conrad-property-credit",
@@ -3629,7 +3719,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $100 credit for qualifying charges at Waldorf Astoria and Conrad properties per eligible stay: book a 2-night minimum at HiltonHonorsAspireCard.com with the Aspire Card Benefit rate (or call 855-292-5757). Per stay, not a fixed period; no annual limit stated.",
-          "category_hint": "brand:hilton"
+          "category_hint": "brand:hilton",
+          "issuer_tracker_match": [
+            {
+              "issuer": "amex",
+              "pattern": "\\bwaldorf\\b|\\bconrad\\b"
+            }
+          ]
         }
       ],
       "certificates": [

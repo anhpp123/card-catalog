@@ -104,7 +104,10 @@
                                            // （不带前导零），值是那个月这一期的金额；没列的月份用 amount。
                                            // 本期金额、剩余金额、「用完」都按它算（Uber Cash：每月 $15，12 月 $35）
           "notes": "December gets an extra $20",
-          "category_hint": "rideshare"     // 可为 null
+          "category_hint": "rideshare",    // 可为 null
+          "issuer_tracker_match": [        // 可选：发卡行导出文件（data/issuer-export.schema.json）里哪些 tracker
+            {"issuer": "amex", "pattern": "\\buber\\s*cash\\b"}   // 名对应这条福利。pattern 是不区分大小写的正则，
+          ]                                // 在 tracker 名里搜（不要求整串匹配）；同卡同一 tracker 名只许命中一条福利
         }
       ],
       "certificates": [ {"key": "...", "name": "...", "trigger": "...", "notes": ""} ],
@@ -134,6 +137,7 @@
 - `benefit_types` id 唯一、有 `label_zh`、包含 `other`；每条 `credits[].benefit_type` 都必须是其中之一。
 - `benefit_families` id 唯一、有 `label_zh`、包含 `other`；每个 `benefit_types[].benefit_family` 都必须是其中之一。
 - 每条 `credits[].stack` 是 `per_card`、`once`、`unknown` 之一；同一 `benefit_type` 的福利 `stack` 必须相同（「我能用几份」按类型设）。
+- `credits[].issuer_tracker_match` 是非空列表，每项恰好有 `issuer`（`[a-z][a-z0-9_]*`，同导出文件的 `issuer`）和 `pattern` 两个键；`pattern` 须能编译（Python `re.IGNORECASE`），且不能用 Python 和 Java 写法不同的记号（`(?P`、`\A`、`\Z`、`\z`、`\p{`），因为 App 用 Java 正则跑同一串；同一福利里不重复。App 侧校验 `issuer` 格式和能否编译，不过就整份目录不收。不互相串的保证靠 `tools/issuer_tracker_samples.json`：每个样例 tracker 名在该卡上恰好命中预期那一条（或一条都不中），`tools/test_tools.py`（Python）和 `IssuerTrackerSamplesTest`（JVM）各跑一遍。
 
 以上新增字段都是可选的：旧目录没有它们时 App 照旧工作（卡组织未知的卡不会被商家过滤掉，没有组的上限各算各的，
 没有分区的类型归「其他」，没有 `stack` 的福利按 `unknown` 算）。
@@ -156,7 +160,9 @@
   "exported": "2026-10-11T18:00:00-07:00",
   "instances": [
     {"id": "inst-1", "catalog_id": "amex-platinum", "nickname": "Platinum #1",
-     "relationship_bonus_pct": 0, "anniversary_month": null, "notes": ""}
+     "relationship_bonus_pct": 0, "anniversary_month": null, "notes": "",
+     "bound_issuer": "amex", "issuer_suffix": "12345",          // 可选：发卡行账户绑定，两个要么都有要么都没有；
+     "issuer_synced_at": "2026-10-11T12:00:00-07:00"}           // 同一 (issuer, suffix) 只能绑一张；最后一次应用的导出时间
     // relationship_bonus_pct 是百分数：25 表示 +25%（回报 ×1.25），不是 0.25
   ],
   "valuations": {"chase_ur": 1.5},          // 可选，覆盖 default_cpp
@@ -177,6 +183,17 @@
 - 份数少于张数时只有拿到份的卡计入：本期已记录使用的卡优先，其次以前用过的，其次本期剩余多的，其次组内顺序（池按到期日、卡按持有顺序）；同一张卡在该类型的几项福利算一份。组的合计、剩余、张数后的「能用 N 份」、提醒都只算这些卡。
 - 合计金额按各自本期金额（含 `month_amounts`）相加；组标题只写最近一个到期日前还剩多少（「10-31 前还剩 $75」），其他到期日的钱另起一行（「另有 $120 在 12-31 到期」）。排序按还有钱的最近到期日。
 - 组级「记录使用」只在拿到份的卡里按实例顺序先填满第一张的剩余再填下一张，超出的记在最后一张拿到份的卡上；在某张没拿到份的卡上单独记录，份就挪到那张卡。
+
+## 发卡行数据（导入文件格式见 `data/issuer-export.schema.json`）
+
+设置 →「导入发卡行数据」（系统文件选择器，可多选）和系统分享 / 打开（`application/json`、`text/plain`、`*.json`）走同一个导入函数。文件先按 schema 校验，不合格整份不收，错误写明 JSON 路径。
+
+- **绑定**：每个 `(issuer, suffix)` 绑到一张持有卡，存在该实例上（`bound_issuer`、`issuer_suffix`）。没绑的账户先过绑定步骤：按 `product` 和目录卡名给建议，默认「跳过」，从不自动绑。删卡或「解除绑定」后该尾号回到未绑定。
+- **福利用量**：`kind: credit` 的 tracker 按目录 `credits[].issuer_tracker_match` 找福利，恰好命中一条才写。写进 `credit_usage`，`source` 为 `issuer:<issuer>`，`synced_at` 为文件的 `exported_at`，`period_start` / `period_end` / `period_amount` 是 tracker 自己的周期和金额。发卡行的数优先：同期的手动记录保留，福利页显示「手动记录 $X（已被同步覆盖）」。tracker 周期和目录推算的不一致时信 tracker（覆盖今天的那一期按 tracker 的起止和金额算）并在导入结果里列出。没命中、命中多条、不是美元、没有 `spent` 的 tracker 都列在结果里，不静默丢。
+- **消费进度**（`kind: spend_progress`）存 Room 表 `spend_progress`，卡详情页显示进度条。**Offers** 存 `issuer_offer`，每个 `(issuer, suffix)` 整份替换，过期的不显示；查卡搜索词是某个商家名的子串（不分大小写）时排名上方显示「Offers」块。
+- 同一文件再导一次不改任何东西；比该卡 `issuer_synced_at` 旧的文件对那张卡跳过。导入结果页顺序：脚本自己的 `warnings` 在最上，然后计数、未绑定账户、没对上的 tracker、周期或金额不一致。
+- **导出导入持有卡文件**：带绑定（实例上的三个字段）和发卡行写的 `credit_usage` 行（带 `source` 等四个字段）；**不带** offers 和消费进度——这两样是快照，下次导入发卡行文件就回来。
+- 数据库 v4：从 v3 迁移时给 `card_instance` 加 `bound_issuer`、`issuer_suffix`、`issuer_synced_at`，给 `credit_usage` 加 `source`、`synced_at`、`period_end`、`period_amount`（都可为空，旧行即未绑定、手动记录），新建 `issuer_offer`、`spend_progress` 两张表；原有数据不动。
 
 ## key 生成规则（保证跨版本稳定）
 
