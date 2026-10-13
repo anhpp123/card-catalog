@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "currencies": [
     {
       "id": "cash",
@@ -2105,7 +2105,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $300 annually for airline incidentals (seat upgrades, baggage fees, lounge fees, in-flight services); not airfare. Calendar-year reset and the excluded airlines (Allegiant, Spirit, Sun Country) are from AwardWallet, not the issuer page.",
-          "category_hint": "airfare"
+          "category_hint": "airfare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "bofa",
+              "pattern": "\\bairline\\s+incidental\\b"
+            }
+          ]
         },
         {
           "key": "lifestyle-conveniences-credit",
@@ -2118,7 +2124,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $150 annually: video streaming, food delivery, fitness subscriptions, rideshare. Not monthly (AwardWallet). Calendar-year reset is from AwardWallet.",
-          "category_hint": "streaming"
+          "category_hint": "streaming",
+          "issuer_tracker_match": [
+            {
+              "issuer": "bofa",
+              "pattern": "\\blifestyle\\b"
+            }
+          ]
         },
         {
           "key": "global-entry-tsa-precheck-credit",
@@ -2131,7 +2143,13 @@
           "enrollment_required": null,
           "valid_to": null,
           "notes": "Up to $120 in statement credits for application fees, every four years.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "bofa",
+              "pattern": "\\bglobal\\s+entry\\b|\\btsa\\b|\\bprecheck\\b"
+            }
+          ]
         }
       ],
       "certificates": [
@@ -2287,7 +2305,13 @@
           "enrollment_required": false,
           "valid_to": null,
           "notes": "Primary cardholder; used on purchases made through Capital One Travel; each annual credit expires on the next account-open-date anniversary; no rewards earned on the credit amount. Whether it applies at checkout vs as a statement credit differs between third-party sources.",
-          "category_hint": "travel_general"
+          "category_hint": "travel_general",
+          "issuer_tracker_match": [
+            {
+              "issuer": "capital_one",
+              "pattern": "\\btravel\\s+credit\\b"
+            }
+          ]
         },
         {
           "key": "global-entry-tsa-precheck-fee-credit",
