@@ -626,6 +626,11 @@
       "benefit_family": "airline"
     },
     {
+      "id": "chase_travel_southwest",
+      "label_zh": "Chase Travel 订西南航空",
+      "benefit_family": "airline"
+    },
+    {
       "id": "amex_fhr_thc",
       "label_zh": "Amex FHR / THC 酒店",
       "benefit_family": "hotel"
@@ -709,6 +714,11 @@
     {
       "id": "stubhub",
       "label_zh": "StubHub / viagogo",
+      "benefit_family": "shopping"
+    },
+    {
+      "id": "shops_at_chase",
+      "label_zh": "The Shops at Chase",
       "benefit_family": "shopping"
     },
     {
@@ -2862,7 +2872,13 @@
           "enrollment_required": true,
           "valid_to": "2029-12-31",
           "notes": "$10 monthly checkout promo for DashPass members (groceries, retail, etc.), not a statement credit; DashPass must be activated by 2029-12-31.",
-          "category_hint": "online_groceries"
+          "category_hint": "online_groceries",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bdoor\\s*dash\\b.*\\bnon-?\\s*restaurant\\b"
+            }
+          ]
         }
       ],
       "certificates": [],
@@ -3032,7 +3048,7 @@
           "issuer_tracker_match": [
             {
               "issuer": "chase",
-              "pattern": "\\btravel\\s+credit\\b"
+              "pattern": "^(?!.*\\b(?:swa|southwest)\\b).*\\btravel\\s+credit\\b"
             }
           ]
         },
@@ -3195,6 +3211,44 @@
             }
           ],
           "confidence": "user_reported"
+        },
+        {
+          "key": "southwest-airlines-chase-travel-credit",
+          "name": "Southwest Airlines Chase Travel credit",
+          "benefit_type": "chase_travel_southwest",
+          "stack": "per_card",
+          "amount": 500,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Unlocked by $75,000 in purchases on the card in a calendar year (January 1 to December 31); ready 1-2 weeks after qualifying. Statement credits post automatically for Southwest Airlines purchases made on Chase Travel, up to $500 for the rest of the qualifying calendar year, expiring at the end of the following calendar year; after consecutive qualifying years up to $1,000 can be available at once. The credit must be available when the purchase is made; the covered part earns no points. A card that has not qualified has nothing to use: exclude the credit on that card. Source: https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve (fetched 2026-10-12).",
+          "category_hint": "airfare",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\b(?:swa|southwest)\\b.*\\bcredit\\b|\\bcredit\\b.*\\b(?:swa|southwest)\\b"
+            }
+          ]
+        },
+        {
+          "key": "shops-at-chase-credit",
+          "name": "Shops at Chase credit",
+          "benefit_type": "shops_at_chase",
+          "stack": "per_card",
+          "amount": 250,
+          "period": "year",
+          "resets": "calendar",
+          "enrollment_required": false,
+          "valid_to": null,
+          "notes": "Unlocked by $75,000 in purchases on the card in a calendar year (January 1 to December 31); ready 1-2 weeks after qualifying. Statement credits post automatically for purchases at The Shops at Chase, up to $250 for the rest of the qualifying calendar year and through the following calendar year; after consecutive qualifying years up to $500 can be available at once. The credit must be available when the purchase is made. A card that has not qualified has nothing to use: exclude the credit on that card. Source: https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve (fetched 2026-10-12).",
+          "category_hint": "shopping",
+          "issuer_tracker_match": [
+            {
+              "issuer": "chase",
+              "pattern": "\\bshops\\s+at\\s+chase\\b"
+            }
+          ]
         }
       ],
       "certificates": [],
@@ -3225,7 +3279,8 @@
         "'promo_period' used as a cap period for the Peloton $5,000 total-spend cap (not in the stated period enum).",
         "Credits with period 'four_years' have resets=null (neither calendar nor cardmember year).",
         "Assumes the user's card is the post-June-2025 refreshed Reserve ($795), not a legacy $550 card; the page does not describe legacy terms.",
-        "$250 select Chase Travel hotels credit is user_reported from the benefits hub; period and property list unverified"
+        "$250 select Chase Travel hotels credit is user_reported from the benefits hub; period and property list unverified",
+        "The $500 Southwest and $250 Shops at Chase credits ($75,000 calendar-year unlock) are modeled as calendar-year credits. Chase's terms run each unlock from qualification to the end of the following calendar year, which period 'year' cannot express; the issuer import uses the tracker's own dates."
       ],
       "watch": {
         "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
